@@ -1,0 +1,27 @@
+@for $n from 1 through  60 {
+	$sizen : $n * 2;
+	.fs-#{$n}{
+		font-size: #{$sizen}upx !important;
+		font-weight: 700 !important;
+	}
+} 
+$colors : #1a1c20 #060930 #1c2b2d #214252 #14274e #555555 #373a40;
+@for $i from 1 through 7 {
+  .black-#{$i}
+    {
+		color: nth($colors, $i);
+    }
+}
+.shadow1 {
+	box-shadow: 5upx 5upx 20upx #CCCCCC;
+}
+image {
+		will-change: transform
+}
+.button-theme-bg-color {
+	background-color: #069FFF !important;
+	background: #069FFF !important;
+}
+.theme-color {
+	color: #069FFF !important;
+}

@@ -1,0 +1,22 @@
+.bigFont{
+		font-size: 40upx;
+		font-weight: 400;
+}
+.sendtextbtn{
+	color: red;
+	font-weight: 500;
+	padding: 4upx 16upx;
+	border: 1px solid red;
+	border-radius: 10upx;
+}
+.footer{
+	margin-bottom: 20upx;
+}
+.cashout .footer.green-bg {
+	background-color: #4387ea;
+}
+
+
+input {
+	flex: 1;
+}

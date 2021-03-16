@@ -1,0 +1,249 @@
+view {
+	box-sizing: border-box;
+	line-height: 1;
+}
+
+.header {
+	width: 100vw;
+	/* height: 100upx; */
+	/* background-color: #0ebd83; */
+	background: linear-gradient(90deg, #02D48E, #17B580);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0 20upx 25upx;
+	color: #FFFFFF;
+	font-size: 34upx;
+}
+
+.header .header-left {
+	font-size: 50upx;
+}
+
+.width {
+	width: 150upx;
+}
+
+.mr20 {
+	margin-right: 20upx;
+}
+
+.gray {
+	color: #8B95A0;
+}
+
+.button-img-box {
+	display: flex;
+	align-items: center;
+}
+
+.button-img {
+	width: 45upx;
+	height: 45upx;
+}
+
+// 背景盒子
+.bg-box {
+	width: 750upx;
+	height: 260upx;
+
+	background: linear-gradient(90deg, #418cf1, #0065eb);
+
+	.data-title {
+		height: 60upx;
+		padding-top: 20upx;
+		font-size: 40upx;
+		color: #FFFDEF;
+		font-weight: 700;
+		text-align: center;
+	}
+	.data-content {
+		margin: 20upx auto  0upx;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 690upx;
+		height: 314upx;
+		background-color: #FFFFFF;
+		border-radius: 20upx;
+	}
+	.data-item-wrapper {
+		height: 157upx;
+		display: flex;
+		align-items: center;
+		position: relative;
+		&.border-bottom-1 {
+			border-bottom: 1upx solid  #ECECEC;
+		}
+		&.border-left-1::after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 1upx;
+			height: 56upx;
+			transform: translateY(-50%);
+			background-color:#ECECEC;
+		}
+	}
+	.data-item {
+		width: 230upx;
+		text-align: center;
+	}
+	.data-item.w50{
+		width: 345upx;
+		text-align: center;
+	}
+	.shuzi {
+		color: #02D48F;
+		// color: #069FFF;
+		font-size: 36upx;
+	}
+	.text {
+		margin-top: 20upx;
+		font-size: 26upx;
+		font-weight: 700;
+	}
+}
+
+
+// 策略盒子
+.popup-box-content {
+	// margin-top: 200upx;
+	margin-top: 150upx;
+	width: 750upx;
+	// height: 333upx;
+	// padding: 0upx 30upx 50upx;
+	padding: 0upx 30upx 0upx;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+.popup-box-content-item {
+	margin-top: 60upx;
+	width: 308upx;
+	height: 88upx;
+	color: #FFFFFF;
+	flex-shrink: 0;
+	background: #DBE0DE;
+	border-radius: 44upx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.popup-box-content-item.clear-bendi {
+	margin: 50upx 0upx 0upx 20upx;
+	// width: 350upx;
+	flex: 1;
+}
+.popup-box-content-item.active {
+	// background: linear-gradient(90deg, #17B57F, #02D48F);
+	// background: #6563AE;
+	background: linear-gradient(90deg, #418cf1, #0065eb)
+}
+
+.popup-box-content-item.active::after {
+	display: none;
+}
+
+.popup-box-content-item .img {
+	width: 35upx;
+	height: 35upx;
+	margin-right: 8upx;
+}
+
+
+
+.foot {
+	width: 690upx;	
+	height: 100upx;
+	position: fixed;
+	left: 30upx;
+	bottom: 50upx;
+	// background: linear-gradient(90deg, #17B57F, #02D48F);
+	// background-color: #6563AE;
+	background:linear-gradient(90deg, #418cf1, #0065eb);
+	color: #FFFFFF;
+	font-size: 30upx;
+	line-height: 100upx;
+	text-align: center;
+	border-radius: 60upx;
+}
+
+
+// 大于号
+.icon-xiaoyufuhao {
+	font-size: 24px;
+}
+.my-button-box {
+	margin-top: 60upx;
+	padding: 0 30upx;
+	display: flex;
+	justify-content: space-between;
+}
+.my-button {
+	// margin-top: 50upx;
+	width: 308upx;
+	height: 88upx;
+	color: #FFFFFF;
+	flex-shrink: 0;
+	background: linear-gradient(90deg, #418cf1, #0065eb);
+	border-radius: 44upx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// background-color: #069FFF;
+	
+}
+
+
+
+.input-box {
+	width: 690upx;
+	position: fixed;
+	left: 30upx;
+	bottom: 200upx;
+	
+	height: 100upx;
+	background-color: #FFFFFF;
+	margin-top: 30upx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0 30upx;
+}
+
+.input-box .input-leftText {
+	font-size: 32upx;
+	font-weight: bold;
+}
+
+.input-box .text {
+	text-align: right;
+	font-size: 28upx;
+}
+
+.bottom_btn {
+	width: 690upx;
+	position: fixed;
+	left: 30upx;
+	bottom: 50upx;
+	
+	// margin: 50upx auto;
+	margin: 0upx auto;
+
+}
+
+.bottom_btn .btn {
+	font-size: 32upx;
+	/* background: linear-gradient(90deg, #02D48E, #17B580); */
+	background: linear-gradient(90deg, rgb(65, 140, 241), rgb(0, 101, 235));
+	color: #FFFFFF;
+}

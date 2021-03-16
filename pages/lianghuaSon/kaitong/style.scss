@@ -1,0 +1,46 @@
+view {
+	box-sizing: border-box;
+	line-height: 1;
+}
+page {
+	background-color: #FFFFFF;
+}
+.big-box {
+	background-color: #FFFFFF;
+	width: 750upx;
+	height: 100vh;
+}
+.content-box {
+	padding-top: 145upx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.content-img {
+		width: 581upx;
+		height: 431upx;
+	}
+}
+.text {
+	margin-top: 50upx;
+	font-size: 30upx;
+	color: #9A9A9A;
+}
+.button-box {
+	margin-top: 117upx;
+	width: 249upx;
+	height: 80upx;
+	border: 1px solid #0065eb;
+	border-radius: 10px;
+	color: #0065eb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30upx;
+}
+
+
+
+
+.icon-xiaoyufuhao {
+	font-size: 24px;
+}

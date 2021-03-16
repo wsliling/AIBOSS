@@ -1,0 +1,137 @@
+.header{
+	width: 100vw;
+	/* height: 100upx; */
+	// background-color: #0ebd83;
+	background: linear-gradient(90deg, #02D48E, #17B580);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0 20upx 30upx 20upx;
+	color: #FFFFFF;
+	font-size: 34upx;
+}
+.header .header-left{
+	font-size: 50upx;
+}
+.width{
+	width: 150upx;
+}
+.header-box{
+	color: #999999;
+	font-size: 20upx;
+	line-height: 30upx;
+	background-color: #f7f6fb;
+	box-sizing: border-box;
+	padding: 20upx;
+}
+.header-box .header-box-item{
+	margin-top: 15upx;
+	// height: 30upx;
+	line-height: 1.4;
+}
+.menu{
+	width: 750upx;
+	height: 150upx;
+	box-sizing: border-box;
+	padding: 35upx 30upx 0upx 30upx;
+}
+.menu .menu-top{
+	font-weight: 400;
+	font-size: 34upx;
+}
+.menu .menu-input{
+	margin-top: 15upx;
+	height: 70upx;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #cccccc;
+	input {
+		width: 100%;
+	}
+}
+.bottom_btn{
+	margin-top: 100upx;
+	
+}
+.bottom_btn .btn{
+	width: 690upx;
+	margin: 0 auto;
+	background: linear-gradient(to right,#408cf0, #0065eb);
+	color: #FFFFFF;
+}
+
+.phone-popup-box {
+	width: 750upx;
+	// height: 455upx;
+	background-color: #FFFFFF;
+	.popup-title {
+		height: 88upx;
+		border-bottom: 1upx solid #ECECEC;		
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 30upx;
+	}
+	.popup-title-left {
+		font-size: 32upx;
+		font-weight: 700;
+	}
+	.popup-title-right {
+		font-size: 30upx;
+		font-weight: 500;
+		color: #666666;
+	}
+	.popup-content {
+		padding: 60upx 30upx 30upx;
+	}
+	.phone-num {
+		font-size: 30upx;
+		font-weight: 500;
+	}
+	.send-box {
+		margin-top: 25upx;
+		width: 690upx;
+		height: 60upx;
+		border-bottom: 1upx solid #ECECEC;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		input {
+			width: 300upx;
+			height: 60upx;
+		}
+	}
+	.send {
+		box-sizing: border-box;
+		flex-shrink: 0;
+		padding: 10upx 30upx;
+		height: 60upx;
+		border: 1px solid #FF3333;
+		border-radius: 8upx;
+		color: #FF3333;
+		font-size: 28upx;
+		line-height: 45upx;
+		font-size: 36upx;
+	}
+	.submit {
+		width: 690upx;
+		height: 88upx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 80upx auto 0upx;
+		background: linear-gradient(to right,#b4d0f8, #b4d0f8);
+		color: #FFFFFF;
+		font-size: 36upx;
+		&.op06 {
+			opacity: 0.6;
+		}
+	}
+}
+
+
+
+.icon-xiaoyufuhao {
+	font-size: 24px;
+}

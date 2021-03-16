@@ -1,0 +1,131 @@
+.big-box {
+	height: 100vh;
+}
+.topimg{
+	width: 100vw;
+	/* height: 1098upx; */
+	height: 100vh;
+	/* background-image: url(../../common/image/zxleft.jpg); */
+	background-image: url('@/static/mine/yaoqing3.png');
+	background-color: #23232d;
+	background-repeat:  no-repeat;
+	/* background-position: center; */
+	background-position: center top;
+	background-size: 100%;
+	position: relative;
+}
+image {
+	background-color: #ECECEC;
+}
+/* .topimg .back{ */
+.back{
+	/* position: absolute; */
+	position: fixed;
+	/* top: 70upx; */
+	top: 0upx;
+	left: 30upx;
+	z-index: 7;
+	font-size: 50upx;
+	color: #FFFFFF;
+}
+.userInfo{
+	background-color: #fff;
+	width: 690upx;
+	border-radius: 30upx;
+	position: fixed;
+	bottom: 30upx;
+	left: 30upx;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+}
+.userInfo .info-left .left-top{
+	display: flex;
+	box-sizing: border-box;
+}
+.userInfo .info-left .left-top .img{
+	/* width: 100upx;
+	height: 100upx; */
+	width: 150upx;
+	height: 150upx;
+	border-radius: 50%;
+}
+.userInfo .info-left .left-top .usertext{
+	margin-left: 20upx;
+}
+.userInfo .info-left .left-top .usertext .text-top{
+	/* font-size: 34upx; */
+	font-size: 40upx;
+	font-weight: 700;
+}
+/* .userInfo .info-left .left-top .usertext .text-bottom{
+	color: #FFFFFF;
+	background-color: #007AFF;
+	font-size: 32upx;
+	white-space: nowrap;
+	margin-top: 10upx;
+	
+	padding: 5upx 16upx;
+	border-radius: 20upx;
+} */
+
+ .text-bottom{
+	color: #FFFFFF;
+	background-color: #007AFF;
+	/* font-size: 32upx; */
+	font-size: 32upx;
+	white-space: nowrap;
+	margin-top: 10upx;
+	/* padding: 5upx 10upx; */
+	padding: 0upx 16upx;
+	border-radius: 30upx;
+	text-align: center;
+	height: 62upx;
+	line-height: 62upx;
+}
+.userInfo .info-left .left-bottom{
+	font-size: 26upx;
+	white-space: nowrap;
+	margin-top: 20upx;
+	padding: 0upx 50upx;
+	border-radius: 30upx;
+	color: #FFFFFF;
+	background-color: #ffd34f;
+	text-align: center;
+	height: 62upx;
+	line-height: 62upx;
+	
+}
+.userInfo .info-right{
+	text-align: center;
+}
+.userInfo .info-right .right-top .img{
+	/* width: 160upx;
+	height: 160upx; */
+	width: 200upx;
+	height: 200upx;
+	border-radius: 10upx;
+	border: 0.5px solid #CCCCCC;
+}
+.userInfo .info-right .right-bottom{
+	font-size: 20upx;
+}
+.info-left {
+	align-self: flex-start;
+	/* height: 250upx; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.saoma {
+	font-size: 45upx;
+	padding: 15upx 0upx 25upx;
+	text-align: center;
+	color: #e63a3d;
+	font-weight: 900;
+	text-shadow: 0upx 0upx 8upx #e63a3d
+/* 	, 
+					0upx 0upx 5upx #e63a3d,
+	        0upx 0upx 5upx #e63a3d */
+}

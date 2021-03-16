@@ -1,0 +1,324 @@
+view {
+	box-sizing: border-box;
+	line-height: 1;
+}
+
+.header {
+	width: 100vw;
+	/* height: 100upx; */
+	/* background-color: #0ebd83; */
+	background: linear-gradient(90deg, #02D48E, #17B580);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0 20upx 25upx;
+	color: #FFFFFF;
+	font-size: 34upx;
+}
+
+.header .header-left {
+	font-size: 50upx;
+}
+
+.width {
+	width: 150upx;
+}
+
+
+.gray {
+	color: #8B95A0;
+}
+
+/* 内容盒子 */
+.content-box {
+	&.mt20  {
+		margin-top: 20upx;
+	}
+	.item-wrapper {
+		background-color: #FFFFFF;
+	}
+
+	.item {
+		width: 690upx;
+		margin: 0 auto;
+		height: 110upx;
+		/* border-top: 1upx solid #ECECEC; */
+		border-bottom: 1upx solid #ECECEC;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.item-left {
+			font-size: 28upx;
+			font-weight: 700;
+			.fss-24 {
+				font-size: 24upx;
+			}
+		}
+		.item-right {
+			flex-shrink: 0;
+			flex: 1;
+			display: flex;
+			align-content: center;
+			justify-content: flex-end;
+			font-size: 28upx;
+			font-weight: 700;
+			.gray.black {
+				color: #000000;
+			}
+
+		}
+	
+		.percent {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #8B95A0;
+			// padding-top: 10upx;
+			font-size: 28upx;
+			margin-left: 10upx;
+			font-weight: 400;
+		}
+	
+		.minute {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-left: 20upx;
+			color: #8C96A0;
+			font-size: 28upx;
+		}
+	
+		.iconfont.icon-dayuhao {
+			margin-left: 10upx;
+			&::before {
+				color: #C9D1DB;
+				font-size: 20upx;
+			}
+		}
+	
+		input {
+			flex: 1;
+			height: 110upx;
+			text-align: right;
+			font-size: 28upx;
+		}
+	
+		&.fudu {
+			display: flex;
+			justify-content: space-between;
+	
+			.item-left {
+				flex-shrink: 0;
+				margin-right: 90upx;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				&.w410 {
+					width: 390upx;
+					margin-right: 20upx;
+				}
+			}
+	
+			.item-left-left {
+				flex-shrink: 0;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				input {
+					flex-shrink: 0;
+				}
+	
+			}
+	
+			.item-right-right {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+	
+				input {
+					// font-weight: 400;
+					font-weight: 700;
+					margin: 0upx 0upx 0upx 20upx;
+				}
+	
+			}
+	
+			.w300 {
+				width: 300upx;
+			}
+			.w320 {
+				width: 320upx;
+			}
+			.w280 {
+				width: 280upx;
+			}
+			
+		}
+	}
+
+}
+
+/* 弹窗 */
+.pop-box {
+	width: 750upx;
+	padding: 30upx 30upx 0upx;
+	background: #FFFFFF;
+	border-radius: 40upx 40upx 0upx 0upx;
+
+	.pop-title {
+		width: 690upx;
+		height: 90upx;
+		font-size: 32upx;
+		font-weight: 700;
+		border-bottom: 1upx solid #ECECEC;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.pop-item {
+		width: 690upx;
+		height: 90upx;
+		font-size: 30upx;
+		border-bottom: 1upx solid #ECECEC;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.pop-item-left {
+		font-size: 30upx;
+		font-weight: 500;
+	}
+	.pop-item-right {
+		width: 30upx;
+		height: 30upx;
+		border-radius: 50%;
+		border: 1upx solid #8C96A0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.iconfont.icon-dui {
+			padding-top: 5upx;
+			font-size: 10upx;
+			color: #FFFFFF;
+		}
+		&.active {
+			background-color: #0166ec;
+			border: 1upx solid #0166ec;
+		}
+	}
+	
+	.close-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 90upx;
+		font-size: 30upx;
+		color: #0166ec;
+	}
+	
+}
+
+
+// 高级补仓盒子
+.cover-box {
+	.border-right-1 {
+		border-right: 1upx solid #E4E4EE;
+	}
+	.cover-title-box {
+		width: 750upx;
+		height: 90upx;
+		background-color: #ECEAF1;
+		display: flex;
+	}
+	.cover-title-item {
+		width: 25%;
+		height: 90upx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 28upx;
+		font-weight: 700;
+		border-bottom: 1upx solid #E4E4EE;
+	}
+	.cover-content-row {
+		background-color: #FFFFFF;
+		display: flex;
+		position: relative;
+		.dui-box {
+			width: 70upx;
+			height: 125upx;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-bottom: 1upx solid #E4E4EE;
+			text-align: center;
+		}
+		.cover-content-item {
+			width: 25%;
+			height: 125upx;
+			// font-size: 24upx;
+			font-size: 28upx;
+			font-weight: 700;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-bottom: 1upx solid #E4E4EE;
+			text-align: center;
+			.uni-input-input, .uni-input-placeholder{
+				font-size: 28upx;
+			}
+		}
+	}
+	// 按钮功能
+	.cover-button-box {
+		background-color: #FFFFFF;
+		width: 750upx;
+		height: 88upx;
+		display: flex;
+		align-items: center;
+		.cover-button-item {
+			width: 250upx;
+			height: 88upx;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			image {
+				// width: 33upx;
+				// height: 33upx;
+				width: 40upx;
+				height: 40upx;
+				margin-right: 10upx;
+			}
+			.cover-button-text {
+				// font-size: 30upx;
+				font-size: 36upx;
+				font-weight: 700;
+			}
+		}
+		
+	}
+}
+
+.kaishilianghua {
+	margin: 160upx auto 100upx;
+	width: 690upx;
+	height: 88upx;	
+	border-radius: 10upx;
+	background: linear-gradient(90deg, #418cf1, #0065eb);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #FFFFFF;
+	font-size: 32upx;
+}
+
+.icon-xiaoyufuhao {
+	font-size: 24px;
+}
+
+// 保存按钮
+.save-view {
+	// font-size: 40upx;
+}

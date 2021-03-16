@@ -1,0 +1,59 @@
+.Type{
+	width: 690upx;
+	margin: 0 auto;
+	background-color: #f6f5fa;
+	box-sizing: border-box;
+	padding: 30upx;
+}
+.fwbig{
+	font-weight: bold;
+	font-size: 36upx;
+}
+.fwsmall{
+	font-size: 20upx;
+	color: #989898;
+}
+.cashout{
+	width: 690upx;
+	margin: 0 auto;
+}
+.cashout .number{
+	height: 100upx;
+	line-height: 100upx;
+}
+.cashout .number-item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40upx;
+}
+.cashout .number-item .number-right{
+	display: flex;
+	font-weight: bold;
+}
+.cashout .number-item .number-right .wid{
+	padding: 0 20upx;
+}
+.cashout .number-item .number-right .borderleft{
+	border-left: 1px solid #cccccc;
+}
+.cashout .numbers{
+	color: #989898;
+	font-size: 20upx;
+	margin-top: 10upx;
+}
+.cashout .bottom{
+	height: 100upx;
+	line-height: 100upx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.cashout .footer{
+	height: 90upx;
+	text-align: center;
+	line-height: 90upx;
+	background-color: #b4cff7;
+	color: #FFFFFF;
+	margin-top: 30upx;
+}

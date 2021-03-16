@@ -1,0 +1,469 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// {
+		// 	"path": "pages/register/register",
+		// 	"style": {
+		// 		"navigationBarTitleText": "注册",
+		// 		"navigationBarBackgroundColor": "#fff",
+		// 		"app-plus": {
+		// 			"softinputMode": "adjustResize"
+		// 		}
+		// 	}
+		// },
+		{
+			"path": "pages/tabbar/home/home",
+			"style": {
+				// "navigationBarTitleText": "首页",
+				// "navigationBarBackgroundColor": "#fff",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, 
+		{
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"navigationBarBackgroundColor": "#fff",
+				"app-plus": {
+					"softinputMode": "adjustResize"
+				}
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationBarBackgroundColor": "#fff",
+				"app-plus": {
+					"softinputMode": "adjustResize",
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ad/index",
+			"style": {
+				"navigationBarTitleText": "", // 广告页面
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/agreement/agreement",
+			"style": {
+				"navigationBarTitleText": "用户协议",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, 
+		{
+			"path": "pages/dowmApp/dowmApp",
+			"style": {
+				"navigationBarTitleText": "下载APP",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/tabbar/deal/deal",
+			"style": {
+				"navigationBarTitleText": "AI量化",
+				"navigationBarBackgroundColor": "#fff",
+				// "navigationBarTextStyle": "white",
+				"enablePullDownRefresh":false,
+				"app-plus": {
+					"titleNView": false,
+					"bounce":"none"
+				}
+			}
+		}, {
+			"path": "pages/tabbar/mine/mine",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/tabbar/quantization/quantization",
+			"style": {
+				"navigationBarTitleText": "量化",
+				"navigationBarBackgroundColor": "#fff"
+				// "navigationBarTextStyle": "white"
+			}
+		}, 
+		{
+			"path": "pages/tabbar/money/money",
+			"style": {
+				"navigationBarTitleText": "资产",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/homeMore/homeMore",
+			"style": {
+				"navigationBarTitleText": "更多",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/selectCurrency/selectCurrency",
+			"style": {
+				"navigationBarTitleText": "查看币种",
+				"navigationBarBackgroundColor": "#fff",
+				"app-plus": {
+					"titleNView":{
+						"buttons": [
+							{
+								"color": "#ffffff",
+								"fontSize": "34rpx",
+								"text": "确定  "
+							}
+						]
+					}
+					
+				}
+			}
+		}, {
+			"path": "pages/friends/friends",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/myProfit/myProfit",
+			"style": {
+				"navigationBarTitleText": "我的收益"
+			}
+		}, {
+			"path": "pages/myTeam/myTeam",
+			"style": {
+				"navigationBarTitleText": "我的团队"
+			}
+		}, {
+			"path": "pages/apiLetter/apiLetter",
+			"style": {
+				"navigationBarTitleText": "API授权",
+				"navigationBarBackgroundColor": "#fff",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/transactionRecords/transactionRecords",
+			"style": {
+				"app-plus": {
+					"titleNView": false, // 交易记录
+					"bounce":"none"
+				}
+				// ,"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/customerService/customerService",
+			"style": {
+				"navigationBarTitleText": "联系客服",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/journal/journal",
+			"style": {
+				"navigationBarTitleText": "交易日志",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/fireCoin/fireCoin",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/lookCourse/lookCourse",
+			"style": {
+				"navigationBarTitleText": "查看教程",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/userInfo/userInfo",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/setUpInfo/setUpInfo",
+			"style": {
+				"navigationBarTitleText": "设置",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/updateLoginPassword/updateLoginPassword",
+			"style": {
+				"navigationBarTitleText": "修改登录密码",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/updatePayPassword/updatePayPassword",
+			"style": {
+				"navigationBarTitleText": "修改支付密码",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		},
+		{
+			"path": "pages/updateQuestion/updateQuestion",
+			"style": {
+				"navigationBarTitleText": "修改密保问题",
+				"navigationBarBackgroundColor": "#4387ea",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/contactUs/contactUs",
+			"style": {
+				"navigationBarTitleText": "联系我们",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/usdtDetail/usdtDetail",
+			"style": {
+				"navigationBarTitleText": "USDT明细",
+				"navigationBarBackgroundColor": "#fff",
+				"app-plus": {
+					"bounce":"none"
+				}
+			}
+		}, {
+			"path": "pages/usdtInvest/usdtInvest",
+			"style": {
+				"navigationBarTitleText": "充值",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/usdtCashOut/usdtCashOut",
+			"style": {
+				"navigationBarTitleText": "提现",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		},
+		{
+			"path": "pages/lcDetail/lcDetail",
+			"style": {
+				"navigationBarTitleText": "点卡明细",
+				"navigationBarBackgroundColor": "#fff",
+				"enablePullDownRefresh": false,
+				"app-plus":{
+					"bounce":"none"
+				}
+			}
+		},
+		{
+			"path": "pages/lcInvest/lcInvest",
+			"style": {
+				"navigationBarTitleText": "充币",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		},
+		{
+			"path": "pages/lcCashOut/lcCashOut",
+			"style": {
+				"navigationBarTitleText": "转换",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, 
+		{
+			"path": "pages/convertDetail/convertDetail",
+			"style": {
+				"navigationBarTitleText": "转换明细", // 转换明细
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, 
+		{
+			"path": "pages/convert/convert",
+			"style": {
+				"navigationBarTitleText": "转换", // 转换
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/addUSDTAddress/addUSDTAddress",
+			"style": {
+				"navigationBarTitleText": "添加USDT地址",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/usdtAddress/usdtAddress",
+			"style": {
+				"navigationBarTitleText": "USDT地址",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/getBackLoginPass/getBackLoginPass",
+			"style": {
+				"navigationBarTitleText": "找回登录密码",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}, {
+			"path": "pages/searchCurrency/searchCurrency",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/tabbar/notice/notice",
+            "style" : {
+				"navigationBarTitleText": "资讯",
+				"navigationBarBackgroundColor": "#fff"
+			}
+        }
+		,{
+		    "path" : "pages/tabbar/notice/notice1",
+		    "style" : {
+				"navigationBarTitleText": "公告",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}
+        ,{
+            "path" : "pages/noticeDetail/noticeDetail",
+            "style" : {
+				"navigationBarTitleText": "公告详情",
+				"navigationBarBackgroundColor": "#fff"
+			}
+        }
+		,{
+		    "path" : "pages/noticeDetail/noticeDetail1",
+		    "style" : {
+				"navigationBarTitleText": "资讯详情",
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}
+        ,{
+            "path" : "pages/problem/problem",
+            "style" : {
+				"navigationBarTitleText": "常见问题",
+				"navigationBarBackgroundColor": "#fff"
+			}
+        }
+        ,{
+            "path" : "pages/onlineService/onlineService",
+            "style" : {
+				"navigationBarTitleText": "在线客服",
+				"navigationBarBackgroundColor": "#fff"
+			}
+        }
+        ,{
+            "path" : "pages/moneyManagement/moneyManagement",
+            "style" : {
+				"navigationBarTitleText": "财务管理",
+				"navigationBarBackgroundColor": "#fff"
+				
+			}
+        }
+    ],
+	"subPackages": [{
+			"root": "pages/lianghuaSon",
+			"pages": [{
+					"path": "kaitong/index", // 开通
+					"style": {
+						// "navigationBarTitleText": "开通",
+						// "navigationBarTextStyle": "white",
+						// "navigationBarBackgroundColor": "#03d28d",
+						// "navigationStyle": "custom"
+						"app-plus": {
+							"titleNView": false
+						}
+					}
+				},
+				{
+					"path": "userDefined/index",
+					"style": {
+						"navigationBarTitleText": "", // 自定义策略提交页面
+						"navigationStyle": "custom",
+						"app-plus": {
+							// "titleNView": false, //首页去除原生导航
+							// "bounce": "none",
+							// "scrollIndicator": "none", //不显示滚动条
+							// "softinputMode": "adjustPan"
+							// "softinputMode": "adjustResize"
+						}
+						// "app-plus": {
+						// 	"titleNView": false, //首页去除原生导航
+						// 	"bounce": "none",
+						// 	// "softinputMode": "adjustPan",
+						// 	"scrollIndicator": "none" //不显示滚动条
+						// }
+					}
+				},
+				{
+					"path": "setStrategy/index", //  设置策略
+					"style": {
+						"app-plus": {
+							"titleNView": false
+						}
+					}
+				},
+				{
+					"path": "selectStrategy/index", // 选择策略
+					"style": {
+						"app-plus": {
+							"titleNView": false
+						}
+					}
+				},
+				{
+					"path": "myStrategy/index", // 显示是自定义策略,我的策略
+					"style": {
+						"enablePullDownRefresh":false,
+						"app-plus": {
+							"titleNView": false,
+							"bounce":"none"
+						}
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/dealSon",
+			"pages": [{
+				"path": "dealDetail/index",
+				"style": {
+					"enablePullDownRefresh": true,
+					"navigationBarTitleText": "", // 详情
+					"navigationStyle": "custom"
+				}
+			}]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"custom":true,
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/tabbar/home/home",
+			"iconPath": "static/shouye.png",
+			"selectedIconPath": "./static/selectshouye.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/tabbar/quantization/quantization",
+			"iconPath": "static/lianghua.png",
+			"selectedIconPath": "./static/selectlianghua.png",
+			"text": "量化"
+		}, {
+			"pagePath": "pages/tabbar/deal/deal",
+			"iconPath": "static/jiaoyi.png",
+			"selectedIconPath": "./static/selectjiaoyi.png",
+			"text": "交易"
+		}, {
+			"pagePath": "pages/tabbar/notice/notice",
+			"iconPath": "./static/zichan.png",
+			"selectedIconPath": "./static/selectzichan.png",
+			"text": "公告"
+		}, {
+			"pagePath": "pages/tabbar/mine/mine",
+			"iconPath": "./static/wode.png",
+			"selectedIconPath": "./static/selectwode.png",
+			"text": "我的"
+		}]
+	}
+}

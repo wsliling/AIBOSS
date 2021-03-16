@@ -1,0 +1,44 @@
+.bottom_btn{
+	position: fixed;
+	bottom: 30upx;
+	width: 690upx;
+	height: 90upx;
+	line-height: 90upx;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #02d48f;
+	left: 30upx;
+	right: 30upx;
+	border-radius: 10upx;
+}
+.header{
+	width: 690upx;
+	margin: 0 auto;
+}
+.header .title{
+	height: 70upx;
+	font-weight: 600;
+	line-height: 70upx;
+	margin-top: 40upx;
+}
+.header .content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 10upx;
+}
+.header .content .input{
+	flex: 1;
+}
+.header .content .icon{
+	width: 30upx;
+	font-size: 40upx;
+}
+.bb{
+	border-bottom: 1px solid #cccccc;
+}
+
+.bigFont{
+		font-size: 40upx;
+		font-weight: 400;
+}

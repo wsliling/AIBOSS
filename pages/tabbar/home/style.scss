@@ -1,0 +1,127 @@
+.filterMenus{
+	width: 100%;
+	background: #fff;
+	box-sizing: border-box;
+	border-top: 1upx solid #f2f2f2;
+	.menus{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+		color: #999;
+		>.item:first-child{
+			justify-content: flex-start;
+		}
+		>.item:last-child{
+			justify-content: flex-end;
+		}
+		>.item:nth-child(2){
+			margin-right: -24upx;
+		}
+		.item{
+			font-size: 24upx;
+			text{
+				
+				color: #999;
+			}
+			height: 80upx;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex:1;
+			.iconbtn{
+				display: inline-block;
+				vertical-align: top;
+				height: 100%;
+				width: 18px;
+				position: relative;
+				font-size: 20upx;
+				&::before{
+					position: absolute;
+					content: "\e63f";
+					top: 30upx;
+				}
+			}
+			.filterBtn{
+				display: inline-block;
+				vertical-align: top;
+				height: 100%;
+				width: 24upx;
+				position: relative;
+				font-size: 20upx;
+				color: #999;
+				&::before{
+					position: absolute;
+					content: "\e606";
+					top: 25upx;
+				}
+				&::after{
+					position: absolute;
+					top: 38upx;
+					content: "\e607";
+				}
+			}
+			.upBtn{
+				&::before{
+					color:#000;
+				}
+			}
+			.downBtn{
+				&::after{
+					color:#000;
+				}
+			}
+		}
+		.active{
+			.iconbtn{
+				color:#000;
+			}
+		}
+	}
+}
+
+
+.quotation-item-left{
+	display: flex;
+	.itemName-img{
+		margin-right: 30upx;
+	}
+	>view{
+		image{
+			width: 52upx;
+			height: 52upx;
+		}
+		.paihan{
+			font-size: 22upx;
+			width: 52upx;
+			color: #999;
+			text-align: center;
+		}
+	}
+	.itemName-sy{
+		.sy-title{
+			font-size: 30upx;
+			font-weight: 600;
+			margin-bottom: 5upx;
+		}
+		.znName{
+			font-size: 22upx;
+			color: #999;
+		}
+	}
+}
+.marketvalue{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	>view{
+		flex: 1;
+	}
+}
+.markettimeall{
+	font-size: 22upx;
+	color: #afafaf;
+}
+.quotation-item>view{
+	flex:1
+}

@@ -1,0 +1,157 @@
+page {
+	background-color: #f7f6fb;
+}
+.uni-input-placeholder{
+	color: #8b959f;
+	font-size: 28upx;
+}
+.main-box {
+	width: 700upx;
+	margin: 0 auto;
+}
+
+.main-box .select-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	min-height: 748upx;
+}
+
+.main-box .select-box .select-box-item {
+	width: 335upx;
+	height: 335upx;
+	border-radius: 10upx;
+	text-align: center;
+	margin-top: 40upx;
+	border: 1px solid #edf3fc;
+	box-sizing: border-box;
+	padding-top: 40upx;
+	background-color: #FFFFFF;
+}
+/* .main-box .select-box>view:nth-child(1){
+	border: 1px solid #4387ea;
+	position:relative;
+}
+.sjxdui{
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0upx;
+	right: 0upx;
+	width: 0;
+	height: 0;
+	border-bottom: 80upx solid #4387ea;
+	border-left: 80upx solid transparent;
+}
+.sjxdui:after{
+	content: '\e608';
+	position: absolute;
+	color: #fff;
+	right: 10upx;
+	top: 40upx;
+	z-index: 10;
+	font-weight: bold;
+}
+.main-box .select-box>view:nth-child(2){
+	border: 1px solid #4387ea;
+	position:relative;
+} */
+
+
+.main-box .select-box .select-box-item .item-img {
+	width: 150upx;
+	height: 150upx;
+	border-radius: 50%;
+	border: 2px solid #edf3fc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.main-box .select-box .select-box-item .item-img .img {
+	display: inline-block;
+	width: 125upx;
+	height: 125upx;
+	border-radius: 50%;
+}
+
+.main-box .select-box .select-box-item .item-center-text {
+	font-size: 34upx;
+	font-weight: 600;
+	margin-top: 10upx;
+}
+
+.main-box .select-box .select-box-item .item-bottom-text {
+	margin-top: 10upx;
+	/* color: #8b95a0; */
+	color: #8b95a0;
+	font-size: 30upx;
+}
+
+.main-box .input-box {
+	height: 100upx;
+	background-color: #FFFFFF;
+	margin-top: 30upx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0 30upx;
+}
+
+.main-box .input-box .input-leftText {
+	font-size: 30upx;
+	font-weight: 600;
+}
+
+
+.main-box .input-box .text {
+	text-align: right;
+	font-size: 28upx;
+}
+
+.main-box .bottom_btn {
+	margin: 50upx auto;
+
+}
+
+.main-box .bottom_btn .btn {
+	/* background-image: linear-gradient(#2decad, #17b580); */
+
+	/* background: linear-gradient(90deg, #02D48E, #17B580); */
+	background: linear-gradient(90deg, #418cf1, #0065eb);
+	color: #FFFFFF;
+	font-size: 32upx;
+	height: 100upx;
+	line-height: 100upx;
+}
+
+.active {
+	border: 1px solid #02d48f !important;
+	position: relative;
+}
+
+.my-gou {
+	position: absolute;
+	bottom: -2upx;
+	right: -2upx;
+}
+.my-gou.active::after {
+	content: '✔';
+	display: block;
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	color: #ffffff;
+	/**对号大小*/
+	font-size: 20px;
+	line-height: 25upx;
+	border: 50upx solid #418cf1;
+	/* border-color: transparent #02d48f #02d48f transparent; */
+	border-color: transparent #418cf1 ##418cf1 transparent;
+	z-index: 6;
+}
+

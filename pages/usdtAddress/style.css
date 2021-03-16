@@ -1,0 +1,74 @@
+page{
+	background-color: #f7f6fb;
+}
+.bottom_btn{
+	position: fixed;
+	bottom: 30upx;
+	width: 690upx;
+	height: 90upx;
+	line-height: 90upx;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #02d48f;
+	left: 30upx;
+	right: 30upx;
+	border-radius: 10upx;
+}
+.main-box{
+	width: 100%;
+	margin-bottom: 150upx;
+}
+.main-box .main-box-item{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 30upx;
+	/* height: 260upx; */
+	height: auto;
+	font-size: 28upx;
+	margin-top: 20upx;
+	background-color: #FFFFFF;
+}
+.main-box .main-box-item .header{
+	height: 80upx;
+	line-height: 80upx;
+	font-weight: 500;
+}
+.main-box .main-box-item .header-name{
+	font-weight: 400;
+	word-break: break-all;
+	padding-bottom: 20upx;
+	border-bottom: 1px solid #ececec;
+}
+.main-box .main-box-item .icon-box{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: 80upx;
+}
+.main-box .main-box-item .icon-box .icon{
+	padding: 0 20upx;
+	color: #a1a1a1;
+	font-size: 20upx;
+}
+.main-box .main-box-item .icon-box .icon .text{
+	margin-left: 10upx;
+}
+.empty-box {
+	width: 750upx;
+}
+.empty-box .empty-img {
+	width: 300upx;
+	height: 220upx;
+	display: block;
+	margin: 200upx auto 0upx;
+}
+.empty-box .text {
+	margin-top: 38upx;
+	font-size: 28upx;
+	color: #999999;
+	text-align: center;
+}
+/* 
+.my-loadmore {
+	margin-bottom:  150upx;
+} */
