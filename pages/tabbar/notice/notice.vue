@@ -13,7 +13,7 @@
 		</view>
 		<view class="topSeat"></view>
 		<!-- 资讯列表 -->
-		<view class="zixun-list">
+		<view class="zixun-list flex">
 			<view class="zixun-item" v-for="(item, index) in NewsList" :key="index" @click="golink(item)">
 				<view class="zixun-item-left">
 					<image :src="item.Logo" mode="aspectFill"></image>
@@ -22,9 +22,9 @@
 					<view class="title">
 						{{item.Title}}
 					</view>
-					<view class="time">
+					<!-- <view class="time">
 					2020.12.12
-					</view>
+					</view> -->
 				</view>
 				
 			</view>
@@ -176,11 +176,16 @@
 
 
 .zixun-list {
+	flex-wrap: wrap;
 	.zixun-item {
+		width: 33.33%;
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 		padding: 30upx;
-		border-bottom: 1px solid #F2F2F2;
+		box-sizing: border-box;
+		// border-bottom: 1px solid #F2F2F2;
 	}
 	.zixun-item-left {
 		display: flex;
@@ -194,7 +199,8 @@
 	.zixun-item-right {
 		flex: 1;
 		height: 100upx;
-		padding-left: 20upx;
+		margin-top: 10upx;
+		// padding-left: 20upx;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
