@@ -116,8 +116,8 @@
 
 		<view class="my-bottom fs-18">
 			<view class="bottom-left">
-				<view class="">火币网账户剩余{{ surplusUsdt | four }} <text class="unit">USDT</text></view>
-				<view class="">总策略总金额建议{{ allFirstAmount*50 | four }} <text class="unit">USDT</text></view>
+				<view class="">火币网账户剩余 <text style="color: #ffeb3b;">{{ surplusUsdt | four }}</text> <text class="unit">USDT</text></view>
+				<view class="">总策略总金额建议 <text style="color: #ffeb3b;">{{ allFirstAmount*50 | four }}</text> <text class="unit">USDT</text></view>
 			</view>
 			<view class="bottom-right"  @tap="openPop">
 				批量操作

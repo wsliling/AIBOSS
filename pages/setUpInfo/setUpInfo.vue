@@ -27,7 +27,7 @@
 			</view>
 		</view>
 		<view class="top fs-18">
-			<view class="top-item bb" @click="toContactUs">
+			<view class="top-item bb" @click="toContactUs" v-if="false">
 				<view class="top-left">
 					联系我们
 				</view>
