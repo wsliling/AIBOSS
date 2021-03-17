@@ -96,6 +96,9 @@
 							{name:'充币',
 								url:'/pages/lcInvest/lcInvest'
 							},
+							{name:'兑换',
+								conver:this.toConvert,
+							},
 							// {name:'转换',
 							// 	conver:this.toConvert
 							// },

@@ -178,7 +178,10 @@
 	font-size: 40upx;
 	font-size: 55upx;
 } */
-
+.h1-title{
+	color: #333333;
+	font-size: 34upx;
+}
 .w-bg {
 	width: 750upx;
 	height: 20upx;
