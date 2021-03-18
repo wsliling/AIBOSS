@@ -24,7 +24,7 @@
 						<text class="iconfont icon-dayuhao"></text>
 					</view>
 				</view>
-				<view class="cardRight">
+				<view class="cardRight" v-if="false">
 					<image :src="yanbol ? '../../../static/cardIcon1.png' : '../../../static/yanjin1.png'" class="img1" mode="" @click="yanbols"></image>
 					<view class="cardBottom" @click="gotolink">
 						<image src="../../../static/cardIcon2.png" class="img2" mode=""></image>
@@ -337,7 +337,8 @@ export default {
 		//跳转到联系客服页面
 		tocustomerService() {
 			uni.navigateTo({
-				url: '/pages/customerService/customerService'
+				url:'/pages/contactUs/contactUs'
+				// url: '/pages/customerService/customerService'
 			});
 		},
 		//跳转到交易日志页面
