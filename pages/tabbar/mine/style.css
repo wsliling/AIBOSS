@@ -144,7 +144,7 @@ page{
 	justify-content: space-around;
 	height: 120upx;
 	padding: 20upx 0;
-	border-bottom: 0.5px solid #ececec;
+	/* border-bottom: 0.5px solid #ececec; */
 }
 /* .team-box >>> .box-item:last-of-type{
 	border-bottom: none;
@@ -166,8 +166,8 @@ page{
 	margin-right: 8upx;
 }
 .team-box >>> .box-item .box-item-left  .left-text{
-	font-size: 30upx;
-	margin-left: 10upx;
+	font-size: 28upx;
+	color: #333;
 }
 .team-box >>> .box-item .box-item-right{
 	height: 100upx;
@@ -184,8 +184,8 @@ page{
 	align-items: center;
 } */
 .box-item-left image {
-	width: 50upx;
-	height: 48upx;
+	width: 54upx;
+	height: 54upx;
 }
 
 /deep/ .top {
