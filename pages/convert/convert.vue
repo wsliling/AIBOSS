@@ -14,7 +14,11 @@
 		</view> -->
 		<view class="lc-usdt-change-newbox">
 			<view class="left-box">
-				<view class="ball blue"></view><view class="ball"></view><view class="ball"></view><view class="ball"></view><view class="ball red"></view>
+				<view class="ball blue"></view>
+				<view class="ball"></view>
+				<view class="ball"></view>
+				<view class="ball"></view>
+				<view class="ball red"></view>
 			</view>
 			<view class="center-box" v-if="fromshouyi">
 				<view class="item">
@@ -136,9 +140,9 @@
 						active: false,
 					}
 				],
-				show_select_box:false,
-				fromshouyi:0,
-				show_text:"点卡"
+				show_select_box: false,
+				fromshouyi: 0,
+				show_text: "点卡"
 			}
 		},
 		components: {
@@ -157,7 +161,9 @@
 				return res
 			},
 		},
-		onLoad(e) {this.fromshouyi=e.fromshouyi?e.fromshouyi:0},
+		onLoad(e) {
+			this.fromshouyi = e.fromshouyi ? e.fromshouyi : 0
+		},
 		onShow() {
 			this.UserId = uni.getStorageSync('userId')
 			this.Token = uni.getStorageSync('token')
@@ -176,7 +182,7 @@
 				if (res.code != 0) return
 				this.lc = res.data.lc
 				this.usdt = res.data.usdt
-				this.availableLC = res.data.availableLC
+				this.availableLC = this.fromshouyi ? res.data.availableLC : res.data.usdt
 			},
 			// 切换类型
 			changeType(item, index) {
@@ -193,11 +199,11 @@
 					this.calcLC()
 				}
 			},
-			newchangeType(index){
-				this.isLC = index==0?true:false;
-				this.show_text = index==0?"点卡":"USDT";
+			newchangeType(index) {
+				this.isLC = index == 0 ? true : false;
+				this.show_text = index == 0 ? "点卡" : "USDT";
 				this.show_select_box = false
-				if(this.isLC == false){
+				if (this.isLC == false) {
 					this.calcLC()
 				}
 			},
@@ -225,10 +231,10 @@
 					this.changeNum = this.availableLCs
 				} else {
 					// 活动lc转usdt
-					if(!this.availableLCs) {
+					if (!this.availableLCs) {
 						return
 					}
-					let data = await get('User/LC2USDT', params,{},false)
+					let data = await get('User/LC2USDT', params, {}, false)
 					if (data.code != 0) return this.changeNum = 0
 					this.changeNum = data.data
 				}
@@ -245,104 +251,108 @@
 				console.log(today)
 				// let msg = '推广收益每月1号正式结算,转换日期为每月1号到3号,未到日期不能转换'
 				// if(today == 1 || today == 2 || today == 3) {
-					if (!this.availableLCs) return uni.showToast({
-						title: '请输入转换数量',
-						icon: 'none',
-						duration: 2000
-					})
-					if (!this.payPassword) return uni.showToast({
-						title: '请输入支付密码',
-						icon: 'none',
-						duration: 2000
-					})
-					
-					let params = {
+				if (!this.availableLCs) return uni.showToast({
+					title: '请输入转换数量',
+					icon: 'none',
+					duration: 2000
+				})
+				if (!this.payPassword) return uni.showToast({
+					title: '请输入支付密码',
+					icon: 'none',
+					duration: 2000
+				})
+
+				let params = {
+					UserId: this.UserId,
+					Token: this.Token,
+					Amount: this.availableLCs,
+					SecondPassWord: this.payPassword
+				}
+				// let {
+				// 	data
+				// } = await RechargeLC(params)
+				let data
+				if (this.fromshouyi == 0) {
+					params = {
 						UserId: this.UserId,
 						Token: this.Token,
-						Amount: this.availableLCs,
+						USDT: this.availableLCs,
 						SecondPassWord: this.payPassword
 					}
-					// let {
-					// 	data
-					// } = await RechargeLC(params)
-					let data 
-					if(this.isLC == true) {
-						data = await post('User/AvailableLC2LC',params)
-					}else {
-						data = await post('User/AvailableLC2USDT',params)
+					data = await post('Recharge/RechargeLC', params)
+				} else {
+					if (this.isLC == true) {
+						data = await post('User/AvailableLC2LC', params)
+					} else {
+						data = await post('User/AvailableLC2USDT', params)
 					}
-					uni.showToast({
-						title: data.msg,
-						icon: 'none',
-						duration: 2000
-					})
-					if (data.code == 0) {
-						// this.timer = setTimeout(() => {
-						// 	uni.navigateBack()
-						// }, 2000)
-						// this.$once('hook:beforeDestroy', () => {
-						// 	clearInterval(this.timer);
-						// 	this.timer = null;
-						// })
-					} 
-					else if(data.code == 1) {
-						// 最少提现 
-						toast(data.msg)
-					}
-					else if(data.code == 3) {
-							this.title = '未设置支付密码',
-							this.content = '是否前往设置?'
-							this.modalSuccessUrl = 'updatePayPassword/updatePayPassword'
-					}
-					else if (data.code == 4) {
-						// usdt不足
-						this.title = data.msg,
+				}
+				uni.showToast({
+					title: data.msg,
+					icon: 'none',
+					duration: 2000
+				})
+				if (data.code == 0) {
+					// this.timer = setTimeout(() => {
+					// 	uni.navigateBack()
+					// }, 2000)
+					// this.$once('hook:beforeDestroy', () => {
+					// 	clearInterval(this.timer);
+					// 	this.timer = null;
+					// })
+				} else if (data.code == 1) {
+					// 最少提现 
+					toast(data.msg)
+				} else if (data.code == 3) {
+					this.title = '未设置支付密码',
+						this.content = '是否前往设置?'
+					this.modalSuccessUrl = 'updatePayPassword/updatePayPassword'
+				} else if (data.code == 4) {
+					// usdt不足
+					this.title = data.msg,
 						this.content = '是否前往充值?'
-						this.modalSuccessUrl = 'lcInvest/lcInvest'
-					}
-					else if (data.code == 5) {
-						this.title = '支付密码错误',
+					this.modalSuccessUrl = 'lcInvest/lcInvest'
+				} else if (data.code == 5) {
+					this.title = '支付密码错误',
 						this.content = '是否前往重置?'
-						this.modalSuccessUrl = 'updatePayPassword/updatePayPassword'
-						
-						//  else if (data.msg.indexOf('支付密码错误') != -1) {
-						// 	this.title = '忘记密码?',
-						// 	this.content = '是否前往重置?'
-						// 	this.$refs.modal.open()
-						// }
-					} 
-					
-					else if (data.code == 9) {
-						// if (data.msg.indexOf('未设置') != -1) {
-						this.title = 'API未授权',
-					  this.content = '是否跳转到授权页面?'
-						this.modalSuccessUrl = 'apiLetter/apiLetter'
-						// }
-						//this.$refs.modal.open()
-						//  else if (data.msg.indexOf('支付密码错误') != -1) {
-						// 	this.title = '忘记密码?',
-						// 	this.content = '是否前往重置?'
-						// }
-					}
-					if(data.code == 3 || data.code == 4  || data.code == 5 || data.code == 9) {
-						uni.showModal({
-						    title: this.title,
-						    content: this.content,
-						    success: (res) => {
-						        if (res.confirm) {
-						            this.modalSuccess(true)
-						        } else if (res.cancel) {
-						            console.log('用户点击取消');
-						        }
-						    }
-						});
-					}
+					this.modalSuccessUrl = 'updatePayPassword/updatePayPassword'
+
+					//  else if (data.msg.indexOf('支付密码错误') != -1) {
+					// 	this.title = '忘记密码?',
+					// 	this.content = '是否前往重置?'
+					// 	this.$refs.modal.open()
+					// }
+				} else if (data.code == 9) {
+					// if (data.msg.indexOf('未设置') != -1) {
+					this.title = 'API未授权',
+						this.content = '是否跳转到授权页面?'
+					this.modalSuccessUrl = 'apiLetter/apiLetter'
+					// }
+					//this.$refs.modal.open()
+					//  else if (data.msg.indexOf('支付密码错误') != -1) {
+					// 	this.title = '忘记密码?',
+					// 	this.content = '是否前往重置?'
+					// }
+				}
+				if (data.code == 3 || data.code == 4 || data.code == 5 || data.code == 9) {
+					uni.showModal({
+						title: this.title,
+						content: this.content,
+						success: (res) => {
+							if (res.confirm) {
+								this.modalSuccess(true)
+							} else if (res.cancel) {
+								console.log('用户点击取消');
+							}
+						}
+					});
+				}
 				// }else {
 				// 	toast(msg)
 				// 	return
 				// }
-				
-				
+
+
 				// else if (data.code == 1) {
 				// 	if (data.msg.indexOf('不足') != -1) {
 				// 		// 	this.title = res.msg,
@@ -496,7 +506,8 @@
 		}
 
 	}
-	.lc-usdt-change-newbox{
+
+	.lc-usdt-change-newbox {
 		width: 690upx;
 		height: 200upx;
 		margin: 0 auto;
@@ -504,70 +515,83 @@
 		border-radius: 12upx;
 		display: flex;
 		align-items: center;
-		.left-box{
+
+		.left-box {
 			width: 100upx;
 			height: 108upx;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 			align-items: center;
-			.ball{
+
+			.ball {
 				width: 10upx;
 				height: 10upx;
 				background-color: #ddd;
 				border-radius: 50%;
 			}
-			.blue{
+
+			.blue {
 				background-color: #0266eb;
 				width: 16upx;
 				height: 16upx;
 			}
-			.red{
+
+			.red {
 				background-color: #FF3333;
 				width: 18upx;
 				height: 18upx;
 			}
 		}
-		.center-box{
+
+		.center-box {
 			flex: 1;
 			color: #000;
-			.item{
+
+			.item {
 				height: 100upx;
 				line-height: 100upx;
 				font-weight: 600;
 				position: relative;
-				.iconfont{
+
+				.iconfont {
 					font-size: 30upx;
 					color: #666;
 					margin-left: auto;
 					margin-right: 30upx;
-					transform:rotate(90deg);
+					transform: rotate(90deg);
 				}
-				.show-box{
+
+				.show-box {
 					display: flex;
 					align-items: center;
 				}
-				.select-box{
+
+				.select-box {
 					position: absolute;
 					top: 100upx;
 					width: 100%;
 					box-sizing: border-box;
 					background-color: #e7f0fd;
 					z-index: 9;
-					view{
+
+					view {
 						padding-left: 50upx;
 						line-height: 80upx;
 					}
-					view:last-child{
+
+					view:last-child {
 						border-top: 1px #ddd solid;
 					}
 				}
 			}
-			.item:last-child{
+
+			.item:last-child {
 				border-top: 1px #ddd solid;
 			}
 		}
-		.right-box{
+
+		.right-box {
 			border-left: 1px #ddd solid;
 			width: 140upx;
 			height: 200upx;
@@ -576,10 +600,11 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			image{
+
+			image {
 				width: 66upx;
 				height: 50upx;
-				transform:rotate(90deg);
+				transform: rotate(90deg);
 				filter: grayscale(90%);
 				filter: gray;
 			}
