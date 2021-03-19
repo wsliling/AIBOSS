@@ -9,6 +9,7 @@
 		align-items: center;
 		flex-direction: row;
 		color: #999;
+		margin-bottom: 10upx;
 		>.item:first-child{
 			justify-content: flex-start;
 		}
@@ -19,9 +20,8 @@
 			margin-right: -24upx;
 		}
 		.item{
-			font-size: 28upx;
+			font-size: 30upx;
 			text{
-				
 				color: #666;
 			}
 			height: 80upx;
@@ -102,7 +102,7 @@
 		.sy-title{
 			font-size: 30upx;
 			font-weight: 600;
-			margin-bottom: 5upx;
+			margin-bottom: 10upx;
 		}
 		.znName{
 			font-size: 22upx;
@@ -119,7 +119,8 @@
 	}
 }
 .markettimeall{
-	font-size: 24upx;
+	margin-top: 10upx;
+	font-size: 26upx !important;
 	color: #999;
 }
 .quotation-item>view{

@@ -117,7 +117,7 @@
 									</view>
 									<view class="itemName-sy">
 										<view class="sy-title">{{item.Names | namefilter}}</view>
-										<view class="znName" style="margin-bottom: 5upx;" v-if="item.ZhName ">{{item.ZhName}}/</view>
+										<view class="znName" v-if="item.ZhName ">{{item.ZhName}}/</view>
 										<view class="znName">{{item.EnName}}</view>
 									</view>
 									<!-- {{ item.name }} -->
@@ -144,7 +144,7 @@
 									<view class="" :class="item.baifenbi >= 0 ? 'green':'red'">
 										<view class="" style="font-size: 30upx;">${{ item.close | four(6) }}</view>
 										<!-- {{ item.close > item.open ? '+'+((item.close - item.open)/item.close).toFixed(5)+'%' : ((item.close - item.open)/item.close).toFixed(5) +'%' }} -->
-										<view>{{ item.baifenbi > 0 ? "+" : ''}}{{ item.baifenbi | four(2) }}%</view>
+										<view style="font-size: 26upx; margin-top: 10upx;">{{ item.baifenbi > 0 ? "+" : ''}}{{ item.baifenbi | four(2) }}%</view>
 									</view>
 								</view>
 							</view>

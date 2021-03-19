@@ -24,9 +24,9 @@
 						<text class="iconfont icon-dayuhao"></text>
 					</view>
 				</view>
-				<view class="cardRight" v-if="false">
-					<image :src="yanbol ? '../../../static/cardIcon1.png' : '../../../static/yanjin1.png'" class="img1" mode="" @click="yanbols"></image>
-					<view class="cardBottom" @click="gotolink">
+				<view class="cardRight">
+					<image :src="yanbol ? '/static/cardIcon1.png' : '/static/yanjin1.png'" class="img1" mode="widthFix" @click="yanbols"></image>
+					<view class="cardBottom" @click="gotolink" v-if="false">
 						<image src="../../../static/cardIcon2.png" class="img2" mode=""></image>
 						<view class="bottomTitle">公告</view>
 					</view>

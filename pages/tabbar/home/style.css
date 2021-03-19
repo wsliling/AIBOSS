@@ -114,6 +114,9 @@
 	box-sizing: border-box;
 	
 }
+.main-Content .quotation >>> .quotation-item:last-child{
+	border-bottom: none;
+}
 .quotation-item>view{
 	overflow: hidden;
 }
