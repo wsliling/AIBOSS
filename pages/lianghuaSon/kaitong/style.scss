@@ -1,14 +1,23 @@
+page {
+	width: 100%;
+	height: 100vh;
+	background-image: url(../../../static/poster.png);
+	background-color: #f00;
+}
 view {
 	box-sizing: border-box;
 	line-height: 1;
 }
 page {
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 }
 .big-box {
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	width: 750upx;
 	height: 100vh;
+	background-image: url(../../../static/poster.png);
+	background-size: 100% 100%;
+	position: relative;
 }
 .content-box {
 	padding-top: 145upx;
@@ -23,23 +32,23 @@ page {
 .text {
 	margin-top: 50upx;
 	font-size: 30upx;
-	color: #9A9A9A;
+	color: #9a9a9a;
 }
 .button-box {
-	margin-top: 117upx;
-	width: 249upx;
-	height: 80upx;
-	border: 1px solid #0065eb;
-	border-radius: 10px;
-	color: #0065eb;
+	width: 348upx;
+	height: 78upx;
+	border: 2upx solid #699eff;
+	border-radius: 40upx;
+	font-size: 36upx;
+	font-weight: bold;
+	color: #b6bdff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 30upx;
+	position: absolute;
+	top: 29%;
 }
-
-
-
 
 .icon-xiaoyufuhao {
 	font-size: 24px;

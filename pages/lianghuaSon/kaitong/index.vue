@@ -6,10 +6,10 @@
 		</header-bar>
 		<view class="">
 			<view class="content-box">
-				<image class="content-img" src="/static/lianghua/no-tong.png" mode="widthFix"></image>
+				<!-- <image class="content-img" src="/static/lianghua/no-tong.png" mode="widthFix"></image>
 				<view class="text">
 					您还未开通，开通后可自定义
-				</view>
+				</view> -->
 				<!-- <view @click="clickKaitong" class="button-box"> -->
 				<!-- <view @click="SubmitAudit" class="button-box"> -->
 				<view @click="GetMemberInfo" class="button-box">
