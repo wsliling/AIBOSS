@@ -68,24 +68,27 @@
 		<view class="team-box">
 			<select-tab>
 				<template v-slot:mainBox>
-					<!-- <view class="box-item" @click="toMoneyManagement">
+					<view class="box-item" @click="toMoneyManagement">
 						<view class="box-item-left">
 							<image src="../../../static/mine/money_icon.png" mode="aspectFill"></image>
 							<view class="left-text">我的钱包</view>
 						</view>
+						<view class="box-item-right iconfont icon-dayuhao"></view>
 					</view>
 					<view class="box-item" @click="toapiLetter">
 						<view class="box-item-left">
 							<image src="../../../static/mine/API_icon.png" mode="aspectFill"></image>
 							<view class="left-text">API授权</view>
 						</view>
+						<view class="box-item-right iconfont icon-dayuhao"></view>
 					</view>
 					<view class="box-item" @click="toMyProfit">
 						<view class="box-item-left">
 							<image src="../../../static/mine/sy_icon.png" mode="aspectFill"></image>
 							<view class="left-text">我的收益</view>
 						</view>
-					</view> -->
+						<view class="box-item-right iconfont icon-dayuhao"></view>
+					</view>
 					<view class="box-item" data-index="team" @click="toMyTeam">
 						<view class="box-item-left">
 							<!-- <view class="iconfont icon-wodetuandui left-icon">

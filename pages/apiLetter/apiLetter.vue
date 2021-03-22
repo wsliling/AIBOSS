@@ -32,7 +32,7 @@
 					上次同步时间：{{ list ? list.updatetime : '' }}
 				</view>
 			</view>
-			<text class="iconfont icon-gengduo more" @click="checkMore"></text>
+			<text class="iconfont icon-gengduo more" @click="checkMoreTip"></text>
 		</view>
 		<view class="menu-item">
 			<image src="@/static/coin/okew.png" class="img" mode="aspectFit"></image>
@@ -44,7 +44,7 @@
 					上次同步时间：{{ list ? list.updatetime : '' }}
 				</view>
 			</view>
-			<text class="iconfont icon-gengduo more" @click="checkMore"></text>
+			<text class="iconfont icon-gengduo more" @click="checkMoreTip"></text>
 		</view>
 		<uni-popup ref='morePop' type="bottom">
 			<view class="morePop-box">
@@ -337,6 +337,14 @@
 						} else if (res.cancel) {}
 					}
 				});
+			},
+			// 待开放提示
+			checkMoreTip(){
+				uni.showToast({
+					icon:'none',
+					title: '待开放',
+					duration: 2000
+				})
 			},
 
 			openPop() {
