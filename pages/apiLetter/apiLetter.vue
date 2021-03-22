@@ -22,6 +22,30 @@
 			</view>
 			<text class="iconfont icon-gengduo more" @click="checkMore"></text>
 		</view>
+		<view class="menu-item">
+			<image src="@/static/coin/bian-coin.png" class="img" mode="aspectFit"></image>
+			<view class="text">
+				<view class="top fs-18">
+					币安
+				</view>
+				<view v-if="list !== null" class="bottom  fs-15">
+					上次同步时间：{{ list ? list.updatetime : '' }}
+				</view>
+			</view>
+			<text class="iconfont icon-gengduo more" @click="checkMore"></text>
+		</view>
+		<view class="menu-item">
+			<image src="@/static/coin/okew.png" class="img" mode="aspectFit"></image>
+			<view class="text">
+				<view class="top fs-18">
+					okex
+				</view>
+				<view v-if="list !== null" class="bottom  fs-15">
+					上次同步时间：{{ list ? list.updatetime : '' }}
+				</view>
+			</view>
+			<text class="iconfont icon-gengduo more" @click="checkMore"></text>
+		</view>
 		<uni-popup ref='morePop' type="bottom">
 			<view class="morePop-box">
 				<view class="more-item-wrapper">
