@@ -23,6 +23,20 @@
 		<view class="list-kefu">
 			<view @click="golink('/pages/friends/friends')"><image src="../../../static/qusitonss.png"></view>
 			<view @click="golink('/pages/lookCourse/lookCourse')"><image src="../../../static/kefuss.png"></view>
+			<view class="earnings">
+				<view class="sy_icon">
+					<image src="../../../static/sy_icon.png"></image>
+					<view class="txt">平台今日收益（元）</view>
+				</view>
+				<view class="number">546678.00</view>
+			</view>
+			<view class="earningsbgcoor earnings">
+				<view class="sy_icon">
+					<image src="../../../static/sy_icon1.png"></image>
+					<view class="txt">平台累计收益（元）</view>
+				</view>
+				<view class="number">897546678.00</view>
+			</view>
 		</view>
 		<!-- <view class="w-bg">
 		</view> -->

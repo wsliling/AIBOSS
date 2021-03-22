@@ -237,9 +237,40 @@ page {
 }
 .list-kefu{
 	display: flex;
+	flex-wrap: wrap;
 	padding: 30upx 30upx 15upx 30upx;
 	border-top: 1upx solid #f2f2f2;
 	justify-content: space-between;
+}
+.list-kefu .earnings{
+	background: #FFEFED;
+	border-radius: 10px;
+	color: #ea6357;
+	margin-top: 20upx;
+	
+}
+.list-kefu .earnings .sy_icon{
+	display: flex;
+	font-size: 26upx;
+	margin:0 20upx;
+	margin-top: 20upx;
+	margin-bottom: 10upx;
+	align-items: center;
+}
+.list-kefu .earnings .number{
+	font-size: 32upx;
+	margin-left: 20upx;
+	font-weight: bold;
+}
+.list-kefu .earnings .sy_icon image{
+	width: 26upx;
+	height: 26upx;
+	margin-right: 10upx;
+}
+.list-kefu .earningsbgcoor{
+	background: #EFFAFF;
+	border-radius: 10px;
+	color: #2262C4 !important;
 }
 .list-kefu>view{
 	width: 48%;
