@@ -52,12 +52,23 @@ page{
 	display: flex;
 	justify-content: space-between;
 }
+.header .fund{
+	width: 690upx;
+	height: 182upx;
+	background-image: url(../../../static/card1.png);
+	border-radius: 12px;
+	margin-top: 26upx;
+	padding: 30upx;
+}
 .header .userCard .cardLeft{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	font-size: 26upx;
 	color: #cdedff;
+}
+.header .userCard .color_white{
+	color: #FFFFFF;
 }
 .header .userCard .cardLeft .cardMoney{
 	color: #FFFFFF;
@@ -117,7 +128,7 @@ page{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 9%;
+	margin-top: 26upx;
 }
 .header .lookTips image{
 	width: 50upx;
@@ -136,13 +147,13 @@ page{
 	padding-top: 20upx;
 }
 .team-box >>> .box-item{
-	float: left;
-	width: 33.33%;
+	/* float: left;
+	width: 33.33%; */
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	align-items: center;
-	justify-content: space-around;
-	height: 120upx;
+	justify-content: space-between;
+	height: 60upx;
 	padding: 20upx 0;
 	border-bottom: 0.5px solid #ececec;
 }
@@ -153,8 +164,8 @@ page{
 .team-box >>> .box-item .box-item-left{
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
-	flex-direction: column;
+	/* justify-content: space-around; */
+	/* flex-direction: column; */
 	height: 100%;
 }
 .team-box >>> .box-item .box-item-left .left-icon{
@@ -184,8 +195,9 @@ page{
 	align-items: center;
 } */
 .box-item-left image {
-	width: 50upx;
-	height: 48upx;
+	width: 40upx;
+	height: 36upx;
+	margin-right: 10upx;
 }
 
 /deep/ .top {
