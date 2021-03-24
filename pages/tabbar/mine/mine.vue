@@ -32,7 +32,7 @@
 					</view>
 				</view>
 			</view>
-			<view class="userCard fund">
+			<view class="userCard fund" v-if="false">
 				<view class="cardLeft">
 					<view class="cardTitle color_white">团队对冲基金</view>
 					<view class="cardMoney" v-if="yanbol1">
@@ -42,7 +42,7 @@
 					
 				</view>
 				<view class="cardRight">
-					<image :src="yanbol1 ? '../../../static/cardIcon1.png' : '../../../static/yanjin1.png'" class="img1" mode="" @click="yanbols1"></image>
+					<image :src="yanbol1 ? '/static/cardIcon1.png' : '/static/yanjin1.png'" class="img1" mode="widthFix" @click="yanbols1"></image>
 				</view>
 			</view>
 			<view class="lookTips">
@@ -209,6 +209,7 @@ export default {
 		uni.hideTabBar();
 		this.init();
 		this.yanbol = uni.getStorageSync('yanbol');
+		this.yanbol1 = uni.getStorageSync('yanbol1');
 		console.log(this.$store.state.cnyrate);
 	},
 	onUnload() {

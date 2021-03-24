@@ -55,33 +55,33 @@
             },
             "icons" : {
                 "android" : {
-                    "hdpi" : "E:/liu项目/A量化_AIBOSS/logo/android/72x72.png",
-                    "xhdpi" : "E:/liu项目/A量化_AIBOSS/logo/android/96x96.png",
-                    "xxhdpi" : "E:/liu项目/A量化_AIBOSS/logo/android/144x144.png",
-                    "xxxhdpi" : "E:/liu项目/A量化_AIBOSS/logo/android/192x192.png"
+                    "hdpi" : "F:/1李玲/2021/A量化_AIBOSS/logo/android/72x72.png",
+                    "xhdpi" : "F:/1李玲/2021/A量化_AIBOSS/logo/android/96x96.png",
+                    "xxhdpi" : "F:/1李玲/2021/A量化_AIBOSS/logo/android/144x144.png",
+                    "xxxhdpi" : "F:/1李玲/2021/A量化_AIBOSS/logo/android/192x192.png"
                 },
                 "ios" : {
-                    "appstore" : "E:/liu项目/A量化_AIBOSS/logo/ios/1024x1024.png",
+                    "appstore" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/1024x1024.png",
                     "ipad" : {
                         "app" : "",
                         "app@2x" : "",
                         "notification" : "",
-                        "notification@2x" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-40x40.png",
+                        "notification@2x" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-40x40.png",
                         "proapp@2x" : "",
                         "settings" : "",
-                        "settings@2x" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-58x58.png",
-                        "spotlight" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-40x40.png",
-                        "spotlight@2x" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-80x80.png"
+                        "settings@2x" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-58x58.png",
+                        "spotlight" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-40x40.png",
+                        "spotlight@2x" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-80x80.png"
                     },
                     "iphone" : {
-                        "app@2x" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-120x120.png",
-                        "app@3x" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-180x180.png",
-                        "notification@2x" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-40x40.png",
-                        "notification@3x" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-60x60.png",
-                        "settings@2x" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-58x58.png",
-                        "settings@3x" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-87x87.png",
-                        "spotlight@2x" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-80x80.png",
-                        "spotlight@3x" : "E:/liu项目/A量化_AIBOSS/logo/ios/Icon-App-120x120.png"
+                        "app@2x" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-120x120.png",
+                        "app@3x" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-180x180.png",
+                        "notification@2x" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-40x40.png",
+                        "notification@3x" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-60x60.png",
+                        "settings@2x" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-58x58.png",
+                        "settings@3x" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-87x87.png",
+                        "spotlight@2x" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-80x80.png",
+                        "spotlight@3x" : "F:/1李玲/2021/A量化_AIBOSS/logo/ios/Icon-App-120x120.png"
                     }
                 }
             },
@@ -89,9 +89,9 @@
                 "androidStyle" : "default",
                 "iosStyle" : "common",
                 "android" : {
-                    "hdpi" : "E:/liu项目/A量化_AIBOSS/启动页/480x762.png",
-                    "xhdpi" : "E:/liu项目/A量化_AIBOSS/启动页/720x1242.png",
-                    "xxhdpi" : "E:/liu项目/A量化_AIBOSS/启动页/1080x1882.png"
+                    "hdpi" : "F:/1李玲/2021/A量化_AIBOSS/启动页/480x762.png",
+                    "xhdpi" : "F:/1李玲/2021/A量化_AIBOSS/启动页/720x1242.png",
+                    "xxhdpi" : "F:/1李玲/2021/A量化_AIBOSS/启动页/1080x1882.png"
                 }
             }
         }
