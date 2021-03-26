@@ -375,9 +375,8 @@
 				context.setFillStyle("white");
 				context.setLineWidth(5);
 				context.fillRect(0, 0, w, h);
-				var pool = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "I", "M", "N", "O", "P", "Q", "R", "S",
-						"T", "U", "V", "W", "S", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
-					],
+				// var pool = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "I", "M", "N", "O", "P", "Q", "R", "S","T", "U", "V", "W", "S", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
+				var pool = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
 					str = '';
 				for (var i = 0; i < 4; i++) {
 					var c = pool[this.rn(0, pool.length - 1)];
@@ -398,7 +397,7 @@
 				});
 				// 干扰线
 				/**绘制干扰线**/
-				for (var i = 0; i < 6; i++) {
+				for (var i = 0; i < 4; i++) {
 					// context.strokeStyle = this.rc(40, 180);
 					context.strokeStyle = this.rc(40, 180);
 					context.beginPath();
