@@ -55,8 +55,8 @@
 							</view>
 						</view> -->
 					</view>
-					<view @click="clickRemark" class="card-text-right iconfont icon-jinggao" style="transform: scale(1.5);">
-					</view>
+				<!-- 	<view @click="clickRemark" class="card-text-right iconfont icon-jinggao" style="transform: scale(1.5);">
+					</view> -->
 				</view>
 			</view>
 		</view>
@@ -155,7 +155,6 @@
 									<image v-if="!item2.open" src="/static/mine/xiala.png" mode="aspectFill"></image>
 									<image  v-if="item2.open"  src="/static/mine/shouqi.png" mode="aspectFill"></image>
 								</view>
-
 
 
 
@@ -386,7 +385,10 @@
 		<!-- 暂无团队 -->
 		<not-data v-if='myTeamPageList.length == 0  && loadMore === 2'></not-data>
 		<uni-load-more v-if="myTeamPageList.length > 0  && loadMore !== 0" :loadingType="loadMore"></uni-load-more>
-		<uni-popup ref='remarkPop' type="center">
+		<!-- <uni-popup ref='remarkPop' type="center">
+			
+		</uni-popup> -->
+		<view class="m-wrap" v-if="isShow" @click="close">
 			<view class="remark-box">
 				<view class="remark-title">
 					备注
@@ -407,7 +409,7 @@
 					</view>
 				</view>
 			</view>
-		</uni-popup>
+		</view>
 	</view>
 </template>
 
@@ -455,12 +457,16 @@
 				
 				loadingType: 0, //上拉的状态：0-loading前；1-loading中；2-没有更多了
 				isLoad: false ,// 是否可以加载下一页
+				isShow:false
 			}
 		},
 		components: {
 			myTable
 		},
 		methods: {
+			close(){
+				this.isShow=false
+			},
 			clickOpen(item, index) {
 				item.open = !item.open
 				if (item.open) {
@@ -611,6 +617,7 @@
 				}
 				uni.setStorageSync('grade', res.data.grade)
 				this.grade = res.data.grade
+				
 			},
 			// 初始化
 			init() {
@@ -626,6 +633,9 @@
 		},
 		onLoad() {
 			// this.init()
+			if(this.grade ==1 || this.grade ==5 || this.grade ==6 || this.grade ==7){
+				this.isShow=true
+			}
 		},
 		onShow() {
 			uni.pageScrollTo({
