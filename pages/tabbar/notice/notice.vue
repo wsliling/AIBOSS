@@ -43,7 +43,7 @@
 		<uni-load-more v-if="NewsList.length> 0  && loadMore !== 0" :loadingType="loadMore"></uni-load-more>
 		<not-data  v-if='NewsList.length == 0'></not-data>
 		<view style="height: 130upx;width: 100%;"></view>
-		<tabbar :grade='grade' :current='3'></tabbar>
+		<tabbar :grade='grade' :current='2'></tabbar>
 	</view>
 </template>
 

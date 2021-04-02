@@ -7,7 +7,7 @@
 			<!-- <view class="tab flex-column-center-center" v-for="(item,index) in list" :key="index" @click="navigatorTo(item.pagePath)"
 			 v-if="myGradeId !==0 || (myGradeId ===0 && index===0)"> -->
 			 <!-- <view class="tab flex-column-center-center" v-for="(item,index) in list" :key="index" @click="navigatorTo(item.pagePath,item)"> -->
-			 <view class="tab flex-column-center-center" v-for="(item,index) in list" :key="index" @click="GetMemberInfo(item.pagePath,item)" v-if="index!=1">
+			 <view class="tab flex-column-center-center" v-for="(item,index) in list" :key="index" @click="GetMemberInfo(item.pagePath,item)">
 				<image class="plain" :src="current === index ? item.selectedIconPath : item.iconPath"></image>
 
 				<view :class="['text',{'active':current === index}]">{{item.text}}</view>
@@ -72,12 +72,12 @@
 					"iconPath": "/static/shouye.png",
 					"selectedIconPath": "/static/selectshouye.png"
 				},	 
-				{
-					"pagePath": "/pages/tabbar/quantization/quantization",
-					"text": "量化",
-					"iconPath": "/static/lianghua.png",
-					"selectedIconPath": "/static/selectlianghua.png"
-				}, 
+				// {
+				// 	"pagePath": "/pages/tabbar/quantization/quantization",
+				// 	"text": "量化",
+				// 	"iconPath": "/static/lianghua.png",
+				// 	"selectedIconPath": "/static/selectlianghua.png"
+				// }, 
 				{
 					"pagePath": "/pages/tabbar/deal/deal",
 					"text": "AI量化",
@@ -139,7 +139,7 @@
 					this.userId = uni.getStorageSync('userId')
 					this.token = uni.getStorageSync('token')
 					// 判断是否登录了
-					if(this.list[0].pagePath == params || this.list[3].pagePath == params || this.list[4].pagePath == params) {
+					if(this.list[0].pagePath == params || this.list[2].pagePath == params || this.list[3].pagePath == params) {
 						uni.switchTab({
 							url: params,
 							animationType:'none',
@@ -154,7 +154,7 @@
 						return
 					}
 					let token = uni.getStorageSync('token')
-					if(!token && (params == this.list[1].pagePath || params == this.list[2].pagePath)){
+					if(!token && (params == this.list[1].pagePath)){
 						this.popTitle = '请先登录'
 						this.popContent = '是否前往登录页'
 						uni.showModal({
@@ -199,7 +199,7 @@
 					
 					
 					
-					let ress =((this.grade == 1 && params == this.list[1].pagePath) || (this.grade == 1 && params == this.list[2].pagePath))&&preRechargeLC>0
+					let ress =(this.grade == 1 && params == this.list[1].pagePath)&&preRechargeLC>0
 					if(ress) {
 						
 						// toast('您还是游客哦,成为正式用户再来吧')

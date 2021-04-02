@@ -147,7 +147,7 @@
 			</select-tab>
 		</view>
 		<view class="my-tab-empty-box"></view>
-		<tabbar :grade="grade" :current="4"></tabbar>
+		<tabbar :grade="grade" :current="3"></tabbar>
 		<!-- 没有权限邀请好友的弹窗 -->
 		<!-- <my-showModal ref='modal' @success='modalSuccess' :title='popTitle' :content='popContent'></my-showModal> -->
 	</view>

@@ -157,7 +157,7 @@
 				</view>
 			</view>
 		</view> -->
-		<tabbar :current='2'></tabbar>
+		<tabbar :current='1'></tabbar>
 	</view>
 </template>
 
@@ -494,7 +494,7 @@
 				// 	return
 				// }
 				this.scrollTop = e.detail.scrollTop
-				console.log('滚动条滚动了', this.scrollTop)
+				//console.log('滚动条滚动了', this.scrollTop)
 				// console.log(e.detail.scrollTop)
 				// this.scrollTop = e.detail.scrollTop
 				if (e.detail.scrollTop === 0) {

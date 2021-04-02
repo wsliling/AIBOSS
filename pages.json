@@ -444,16 +444,18 @@
 			"iconPath": "static/shouye.png",
 			"selectedIconPath": "./static/selectshouye.png",
 			"text": "首页"
-		}, {
-			"pagePath": "pages/tabbar/quantization/quantization",
-			"iconPath": "static/lianghua.png",
-			"selectedIconPath": "./static/selectlianghua.png",
-			"text": "量化"
-		}, {
+		}, 
+		// {
+		// 	"pagePath": "pages/tabbar/quantization/quantization",
+		// 	"iconPath": "static/lianghua.png",
+		// 	"selectedIconPath": "./static/selectlianghua.png",
+		// 	"text": "量化"
+		// }, 
+		{
 			"pagePath": "pages/tabbar/deal/deal",
 			"iconPath": "static/jiaoyi.png",
 			"selectedIconPath": "./static/selectjiaoyi.png",
-			"text": "交易"
+			"text": "AI量化"
 		}, {
 			"pagePath": "pages/tabbar/notice/notice",
 			"iconPath": "./static/zichan.png",
