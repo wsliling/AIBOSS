@@ -458,7 +458,8 @@
 	.downapp{
 		width: 100%;
 		text-align: center;
-		margin-top: 60upx;
+		margin-top: 30upx;
+		padding: 30upx;
 		color: #4387ea;
 		text-decoration:underline
 	}
