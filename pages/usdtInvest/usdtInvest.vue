@@ -178,13 +178,11 @@
 			},
 			// 同步用户USDT请求
 			async synchronousUSDT() {
-				this.userId = uni.getStorageSync('userId')
-				this.token = uni.getStorageSync('token')
-				let obj = {
-					userId: this.userId,
-					token: this.token
-				}
-				let res = await post('User/SynchronousUSDT',obj)
+				let url=this.showIndex==0?'User/SynchronousUSDT':'User/SynchronousTRCUSDT';
+				let res = await post(url,{
+					userId: uni.getStorageSync('userId'),
+					token: uni.getStorageSync('token')
+				})
 				toast(res.msg)
 			}
 			
