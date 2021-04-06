@@ -1,183 +1,185 @@
 <template>
 	<view class="big-box">
-		<view :style="{'height': customBar+'upx'}"></view>
-		<view class="home_top" >
-			<swiper class="swiper" indicator-active-color="#FFFFFF" :indicator-dots="indicatorDots" :autoplay="autoplay"
-			 :interval="interval" :duration="duration" :circular="true">
-				<swiper-item v-for="item in swiperList" :key="item.id">
-					<view class="swiper-item">
-						<image @click="toAd(item)" :src="item.Pic" class="img" mode="scaleToFill"></image>
-					</view>
-				</swiper-item>
-			</swiper>
-		</view>
-		<view class="Notice-swiper">
-			<view class="Notice-icon"><image src="../../../static/navigitc.png"></view>
-			<swiper class="swiper-Notice" autoplay="autoplay" :duration="2000" circular="true" vertical="true">
-				<swiper-item v-for="(item,index) in NewsList" :key="index" @click="golink(`/pages/noticeDetail/noticeDetail?Id=${item.Id}`)">
-					<view class="swiper-item">{{item.Title}}</view>
-				</swiper-item>
-			</swiper>
-			<view class="more-icon iconfont icon-dayuhao" @click="golink('/pages/tabbar/notice/notice')"></view>
-		</view>
-		<view class="list-kefu">
-			<view @click="golink('/pages/friends/friends')"><image src="../../../static/qusitonss.png"></view>
-			<view @click="golink('/pages/lookCourse/lookCourse')"><image src="../../../static/kefuss.png"></view>
-			<view class="earnings">
-				<view class="sy_icon">
-					<image src="../../../static/sy_icon.png"></image>
-					<view class="txt">平台今日收益</view>
-				</view>
-				<view class="number">${{DayProfit | four(2)}}</view>
-			</view>
-			<view class="earningsbgcoor earnings">
-				<view class="sy_icon">
-					<image src="../../../static/sy_icon1.png"></image>
-					<view class="txt">平台累计收益</view>
-				</view>
-				<view class="number">${{SumProfit | four(2)}}</view>
-			</view>
-		</view>
-		<!-- <view class="w-bg">
-		</view> -->
-		<view class="main-Content">
-			<!-- <view class="menu">
-				<view @click="clcikButton(item,index)" class="menu-item" v-for="(item,index) in menuList" :key="item.id">
-					<image :src="item.logo" class="img" mode="aspectFit"></image>
-					<view class="text" style="overflow: hidden;">
-						{{ item.name }}
-					</view>
-					<image :src="item.logo" class="img shadow1" mode="aspectFill"></image>
-				</view>
-			</view> -->
-			<!-- <view class="w-bg my-ml30">
-
-			</view>
-			<view>
-				<news>
-					<template v-slot:left>
-						<text class="h1-title">资讯</text>
-					</template>
-					<template v-slot:right>
-						<text class="gengduo" @click="toHomeMore">更多</text>
-					</template>
-					<template v-slot:mainContent>
-						<view class="box" v-if="realTime">
-							<view class="box-left">
-								<image :src="realTime[0].Pic" @click="goPage(realTime[0].Url)" class="img" mode="aspectFill"></image>
-							</view>
-							<view class="box-right">
-								<image :src="realTime[1].Pic" @click="goPage(realTime[1].Url)" class="img" mode="aspectFill"></image>
-								<image :src="realTime[2].Pic" @click="goPage(realTime[2].Url)" class="img" mode="aspectFill"></image>
-							</view>
+		<view :style="{'height': 20+customBar+'upx'}"></view>
+		<view class="m-content" style="height: 92vh; overflow: scroll;">
+			<view class="home_top" >
+				<swiper class="swiper" indicator-active-color="#FFFFFF" :indicator-dots="indicatorDots" :autoplay="autoplay"
+				 :interval="interval" :duration="duration" :circular="true">
+					<swiper-item v-for="item in swiperList" :key="item.id">
+						<view class="swiper-item">
+							<image @click="toAd(item)" :src="item.Pic" class="img" mode="scaleToFill"></image>
 						</view>
-					</template>
-				</news>
-			</view> -->
-
-			<!-- <view class="quotation" v-if="isshow"> -->
-			<view class="quotation">
-				<view class="w-bg my-ml30">
-
+					</swiper-item>
+				</swiper>
+			</view>
+			<view class="Notice-swiper">
+				<view class="Notice-icon"><image src="../../../static/navigitc.png"></view>
+				<swiper class="swiper-Notice" autoplay="autoplay" :duration="2000" circular="true" vertical="true">
+					<swiper-item v-for="(item,index) in NewsList" :key="index" @click="golink(`/pages/noticeDetail/noticeDetail?Id=${item.Id}`)">
+						<view class="swiper-item">{{item.Title}}</view>
+					</swiper-item>
+				</swiper>
+				<view class="more-icon iconfont icon-dayuhao" @click="golink('/pages/tabbar/notice/notice')"></view>
+			</view>
+			<view class="list-kefu">
+				<view @click="golink('/pages/friends/friends')"><image src="../../../static/qusitonss.png"></view>
+				<view @click="golink('/pages/lookCourse/lookCourse')"><image src="../../../static/kefuss.png"></view>
+				<view class="earnings">
+					<view class="sy_icon">
+						<image src="../../../static/sy_icon.png"></image>
+						<view class="txt">平台今日收益</view>
+					</view>
+					<view class="number">${{DayProfit | four(2)}}</view>
 				</view>
-				<news>
-					<template v-slot:left>
-						<text class="h1-title">行情</text>
-						<!-- 	{{ '--' |  four}}
-						{{ '0' |  four}}
-						{{ 0 |  four}}
-						{{ 0.0000 |  four}}
-						{{ '0.0000' |  four}} -->
-					</template>
-					<template v-slot:right>
-						<text></text>
-					</template>
-					<template v-slot:mainContent>
-						<!-- <view class="quotation-item" v-for="item in quotation" :key="item.id"> -->
-						<!-- <block v-for="(item,index) in top7List" :key="index"> -->
-				<!-- 		<view class="quotation-item">
-							<view class="quotation-item-left">
-								{{ btcusdt.name }}
-							</view>
-							<view class="quotation-item-center fs-16">
-								<view class="">
-									${{ btcusdt.close | four(6) }}
+				<view class="earningsbgcoor earnings">
+					<view class="sy_icon">
+						<image src="../../../static/sy_icon1.png"></image>
+						<view class="txt">平台累计收益</view>
+					</view>
+					<view class="number">${{SumProfit | four(2)}}</view>
+				</view>
+			</view>
+			<!-- <view class="w-bg">
+			</view> -->
+			<view class="main-Content">
+				<!-- <view class="menu">
+					<view @click="clcikButton(item,index)" class="menu-item" v-for="(item,index) in menuList" :key="item.id">
+						<image :src="item.logo" class="img" mode="aspectFit"></image>
+						<view class="text" style="overflow: hidden;">
+							{{ item.name }}
+						</view>
+						<image :src="item.logo" class="img shadow1" mode="aspectFill"></image>
+					</view>
+				</view> -->
+				<!-- <view class="w-bg my-ml30">
+			
+				</view>
+				<view>
+					<news>
+						<template v-slot:left>
+							<text class="h1-title">资讯</text>
+						</template>
+						<template v-slot:right>
+							<text class="gengduo" @click="toHomeMore">更多</text>
+						</template>
+						<template v-slot:mainContent>
+							<view class="box" v-if="realTime">
+								<view class="box-left">
+									<image :src="realTime[0].Pic" @click="goPage(realTime[0].Url)" class="img" mode="aspectFill"></image>
+								</view>
+								<view class="box-right">
+									<image :src="realTime[1].Pic" @click="goPage(realTime[1].Url)" class="img" mode="aspectFill"></image>
+									<image :src="realTime[2].Pic" @click="goPage(realTime[2].Url)" class="img" mode="aspectFill"></image>
 								</view>
 							</view>
-							<view class="quotation-item-right">
-								<text class="" :class="btcusdt.baifenbi >= 0 ? 'green':'red'">
-									{{ btcusdt.baifenbi > 0 ? "+" : ''}}{{ btcusdt.baifenbi | four(2) }}%
-								</text>
-							</view>
-						</view> -->
-						<view class="filterMenus">
-							<view class="menus">
-								<view class="item" :class="{'active':item.active}" v-for="(item,index) in filterTab" :key="index" @click="shiftFilterTab(index)">
-									{{item.name}}
-									<text v-if="item.single"></text>
-									<text v-else class="iconfont filterBtn" :class="{upBtn:item.sortorder == '0',downBtn:item.sortorder == '1'}"></text>
-								</view>
-							</view>
-						</view>
-						
-						<block v-for="(item,index) in marketList" :key="index">
-							<view class="quotation-item" :style="{'margin-top':index==0?'-20upx':''}">
-								<!-- <view class="quotation-item"> -->
-								<!-- <view class="quotation-item" v-for="(item,index) in websocketList" :key="index"> -->
+						</template>
+					</news>
+				</view> -->
+			
+				<!-- <view class="quotation" v-if="isshow"> -->
+				<view class="quotation">
+					<view class="w-bg my-ml30">
+			
+					</view>
+					<news>
+						<template v-slot:left>
+							<text class="h1-title">行情</text>
+							<!-- 	{{ '--' |  four}}
+							{{ '0' |  four}}
+							{{ 0 |  four}}
+							{{ 0.0000 |  four}}
+							{{ '0.0000' |  four}} -->
+						</template>
+						<template v-slot:right>
+							<text></text>
+						</template>
+						<template v-slot:mainContent>
+							<!-- <view class="quotation-item" v-for="item in quotation" :key="item.id"> -->
+							<!-- <block v-for="(item,index) in top7List" :key="index"> -->
+					<!-- 		<view class="quotation-item">
 								<view class="quotation-item-left">
-									<view class="itemName-img">
-										<image :src="item.Logo"></image>
-										<view class="paihan">{{index | paihanfilter}}</view>
-									</view>
-									<view class="itemName-sy">
-										<view class="sy-title">{{item.Names | namefilter}}</view>
-										<view class="znName" v-if="item.ZhName ">{{item.ZhName}}/</view>
-										<view class="znName">{{item.EnName}}</view>
-									</view>
-									<!-- {{ item.name }} -->
-									<!-- {{ item.Name }} -->
+									{{ btcusdt.name }}
 								</view>
 								<view class="quotation-item-center fs-16">
-									<!-- {{ item.amount }} -->
-									<view class="marketvalue">
-										<view class="" v-if="item.marketprice">{{item.marketprice | Billionfilter}}</view>
-										<view class="" v-else>--</view>
-										<view class="markettimeall">24H:{{item.amount | Billionfilter}}</view>
-									<!-- 	</br>
-										${{ item.close | four(16) }} -->
+									<view class="">
+										${{ btcusdt.close | four(6) }}
 									</view>
-									<!-- <view class="">
-										¥{{ (item.close * 6.7) | four  }}
-									</view> -->
-
 								</view>
-
-								<!-- :class="item.right.split('')[0] == '+' ? 'green' : 'red'" -->
 								<view class="quotation-item-right">
-									<!-- <text :class="+item.open > +item.close ? 'red':'green'" v-html="decimal(item,5)"> -->
-									<view class="" :class="item.baifenbi >= 0 ? 'green':'red'">
-										<view class="" style="font-size: 30upx;">${{ item.close | four(6) }}</view>
-										<!-- {{ item.close > item.open ? '+'+((item.close - item.open)/item.close).toFixed(5)+'%' : ((item.close - item.open)/item.close).toFixed(5) +'%' }} -->
-										<view style="font-size: 26upx; margin-top: 10upx;">{{ item.baifenbi > 0 ? "+" : ''}}{{ item.baifenbi | four(2) }}%</view>
+									<text class="" :class="btcusdt.baifenbi >= 0 ? 'green':'red'">
+										{{ btcusdt.baifenbi > 0 ? "+" : ''}}{{ btcusdt.baifenbi | four(2) }}%
+									</text>
+								</view>
+							</view> -->
+							<view class="filterMenus">
+								<view class="menus">
+									<view class="item" :class="{'active':item.active}" v-for="(item,index) in filterTab" :key="index" @click="shiftFilterTab(index)">
+										{{item.name}}
+										<text v-if="item.single"></text>
+										<text v-else class="iconfont filterBtn" :class="{upBtn:item.sortorder == '0',downBtn:item.sortorder == '1'}"></text>
 									</view>
 								</view>
 							</view>
-						</block>
-
-						<!-- <view class="line">
-
-						</view> -->
-					</template>
-				</news>
+							
+							<block v-for="(item,index) in marketList" :key="index">
+								<view class="quotation-item" :style="{'margin-top':index==0?'-20upx':''}">
+									<!-- <view class="quotation-item"> -->
+									<!-- <view class="quotation-item" v-for="(item,index) in websocketList" :key="index"> -->
+									<view class="quotation-item-left">
+										<view class="itemName-img">
+											<image :src="item.Logo"></image>
+											<view class="paihan">{{index | paihanfilter}}</view>
+										</view>
+										<view class="itemName-sy">
+											<view class="sy-title">{{item.Names | namefilter}}</view>
+											<view class="znName" v-if="item.ZhName ">{{item.ZhName}}/</view>
+											<view class="znName">{{item.EnName}}</view>
+										</view>
+										<!-- {{ item.name }} -->
+										<!-- {{ item.Name }} -->
+									</view>
+									<view class="quotation-item-center fs-16">
+										<!-- {{ item.amount }} -->
+										<view class="marketvalue">
+											<view class="" v-if="item.marketprice">{{item.marketprice | Billionfilter}}</view>
+											<view class="" v-else>--</view>
+											<view class="markettimeall">24H:{{item.amount | Billionfilter}}</view>
+										<!-- 	</br>
+											${{ item.close | four(16) }} -->
+										</view>
+										<!-- <view class="">
+											¥{{ (item.close * 6.7) | four  }}
+										</view> -->
+			
+									</view>
+			
+									<!-- :class="item.right.split('')[0] == '+' ? 'green' : 'red'" -->
+									<view class="quotation-item-right">
+										<!-- <text :class="+item.open > +item.close ? 'red':'green'" v-html="decimal(item,5)"> -->
+										<view class="" :class="item.baifenbi >= 0 ? 'green':'red'">
+											<view class="" style="font-size: 30upx;">${{ item.close | four(6) }}</view>
+											<!-- {{ item.close > item.open ? '+'+((item.close - item.open)/item.close).toFixed(5)+'%' : ((item.close - item.open)/item.close).toFixed(5) +'%' }} -->
+											<view style="font-size: 26upx; margin-top: 10upx;">{{ item.baifenbi > 0 ? "+" : ''}}{{ item.baifenbi | four(2) }}%</view>
+										</view>
+									</view>
+								</view>
+							</block>
+			
+							<!-- <view class="line">
+			
+							</view> -->
+						</template>
+					</news>
+				</view>
 			</view>
+			<view class="my-tab-empty-box">
+			
+			</view>
+			<tabbar :grade='grade' :current='0'></tabbar>
+			
+			<!-- 确认弹窗 -->
+			<!-- <my-showModal ref='modal' @success='modalSuccess' :title='title' :content='content'></my-showModal> -->
 		</view>
-		<view class="my-tab-empty-box">
-
-		</view>
-		<tabbar :grade='grade' :current='0'></tabbar>
-
-		<!-- 确认弹窗 -->
-		<!-- <my-showModal ref='modal' @success='modalSuccess' :title='title' :content='content'></my-showModal> -->
 	</view>
 </template>
 <script>
