@@ -1,5 +1,5 @@
 <template>
-	<view class="big-box">
+	<view class="big-box" :style="{'margin-top':30 + customBar +'rpx'}">
 		<view :style="{'height':customBar+'upx'}"></view>
 		<view class="home_top">
 			<swiper class="swiper" indicator-active-color="#FFFFFF" :indicator-dots="indicatorDots" :autoplay="autoplay"
