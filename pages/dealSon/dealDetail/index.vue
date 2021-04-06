@@ -82,7 +82,7 @@
 					</view> -->
 					
 					
-					<view class="data-item-wrapper border-left-1">
+					<view class="data-item-wrapper border-bottom-1 border-left-1">
 						<view class="data-item w50">
 							<view class="shuzi theme-color fs-20">
 								{{ EtcFee }}
@@ -102,13 +102,13 @@
 		<view class="popup-box-content">
 			
 			<view class="popup-box-content-item" :class="[paternBtn == 1 ? '' : 'active button-theme-bg-color']" @tap="switchChange(1)">
-				<image class="img" src="/static/jiaoyi/jixu.png" mode="widthFix"></image>
+				<image class="img" src="/static/jiaoyi/danci.png" mode="widthFix"></image>
 				<view class="text">
 					继续策略循环
 				</view>
 			</view>
 			<view class="popup-box-content-item" :class="[paternBtn == 2 ? '' : 'active button-theme-bg-color']" @tap="switchChange(2)">
-				<image class="img" src="/static/jiaoyi/danci.png" mode="widthFix"></image>
+				<image class="img" src="/static/jiaoyi/zanting.png" mode="widthFix"></image>
 				<view class="text">
 					执行单次策略
 				</view>
@@ -146,23 +146,12 @@
 		<!-- 跳转到收益 -->
 		<view class="my-button-box">
 			<view class="my-button button-theme-bg-color" @tap="toMyProfit">
-				<image class="img" src="/static/jiaoyi/qian2.png" mode="widthFix"></image>
 				我的收益
 			</view>
 			<view class="my-button button-theme-bg-color" @tap="toTransactionRecords">
-				<image class="img" src="/static/jiaoyi/rizhi2.png" mode="widthFix"></image>
 				交易记录
 			</view>
 
-		</view>
-		<view class="popup-box-content2">
-			<view class="popup-box-content-item" :class="[gainType == 1 ? '' : 'active button-theme-bg-color']" @tap="StrategyTradingin">
-				<image class="img" src="/static/jiaoyi/qingcang.png" mode="widthFix"></image>
-				<view class="text">
-					<!-- 总均价出仓 -->
-					整仓套利
-				</view>
-			</view>
 		</view>
 		<!-- <image @tap="toMyProfit" class="button-img mr20" src="/static/jiaoyi/qian2.png" mode="widthFix"></image> -->
 		<!-- 跳转到交易记录 -->
@@ -178,10 +167,11 @@
 		</view>
 		<!-- <view class="" v-if="!isAut && loadMore == 2"> -->
 		<!-- <view class="" v-if="isAut == 0 && loadMore == 2"> -->
-		<view style="height: 270upx;"></view>
-		<view class="bottom_btn" v-if="isAut == 0 && loadMore == 2">
-			<view>
-				单策略总金额建议 {{FirstAmount*50}} USDT
+		<view class="" v-if="isAut == 0 && loadMore == 2">
+			<view class="input-box" style="bottom: 300upx;">
+				<view class="" v-if="isAut == 0 && loadMore == 2">
+					单策略总金额建议 {{FirstAmount*50}} USDT
+				</view>
 			</view>
 			<view class="input-box">
 				<view class="input-leftText fs-17">
@@ -189,8 +179,11 @@
 				</view>
 				<input type="digit"  v-model="inputData" class="text" placeholder="请输入金额(USDT)" />
 			</view>
-			<button class="btn fs-20" @click="Submit">开始量化</button>
+			<view class="bottom_btn">
+				<button class="btn fs-20" @click="Submit">开始量化</button>
+			</view>
 		</view>
+
 	</view>
 
 </template>
@@ -202,7 +195,7 @@
 		redirect,
 		navigate,
 		post,
-		get,judgeLogin
+		get
 	} from '@/common/utils/index.js'
 	import {
 		StrategyTradingxq,
@@ -224,9 +217,6 @@
 				center: true,
 				isBack: true,
 				paternBtn: 0,
-				// 0是默认套利,1是整仓套利,2-单仓套利
-				// 1是灰色的,不能点,其他0和2可以点,传1参数
-				gainType: 1,
 				paternBtnText: '',
 				title: '',
 				content: '',
@@ -452,15 +442,13 @@
 				this.EtcAmount = data.data.EtcAmount //持仓数量
 				this.ReplenishNum = data.data.ReplenishNum //补仓单数
 				this.EtcProfit = data.data.EtcProfit //持仓盈利
+				this.paternBtn = data.data.Type
 				this.Symbol = data.data.Symbol
 				this.Name = data.data.Name
 				this.FirstAmount = data.data.FirstAmount
 				this.CurrencyCode = data.data.CurrencyCode
 				this.inputData = data.data.FirstAmount ? data.data.FirstAmount : ''
 				this.paternBtn = data.data.Type
-				// 0是默认套利,1是整仓套利,2-单仓套利
-				// 1是灰色的,不能点,其他0和2可以点,传1参数
-				this.gainType = data.data.GainType
 				console.log(data)
 				this.loadMore = 2
 				uni.stopPullDownRefresh()
@@ -627,118 +615,19 @@
 				// this.SecretKey = res.data.secretKey
 			
 			},
-			// 0是默认套利,1是整仓套利,2-单仓套利
-			// 1是灰色的,不能点,其他0和2可以点,传1参数
-			StrategyTradingin() {
-				if(!judgeLogin()) {
-					return
-				}
-				if(this.FirstAmount <= 0) {
-					uni.showToast({
-						title: '您未量化该币种~',
-						icon: 'none',
-						duration: 1000
-					})
-					
-					// isAut: 0, // 0是未开通, 1开通了
-					
-				
-					if(this.timer != null) {
-						return
-					}
-					this.timer = setTimeout(() => {
-						if(this.isAut == 1) {
-							// uni.navigateTo({
-							// 	url: '/pages/apiLetter/apiLetter'
-							// })
-							// 开通了高级功能
-							this.clickUserDefinedItem()
-						}else if(this.isAut == 0) {
-							// 未开通高级
-						}
-						
-						clearTimeout(this.timer);
-						this.timer = null;
-					}, 1000)
-									
-					this.$once('hook:beforeDestroy', () => {
-						clearTimeout(this.timer);
-						this.timer = null;
-					})
-					return
-				}
-				
-				if (this.Authoriztion == null) {
-					uni.showToast({
-						title: '您未授权',
-						icon: 'none',
-						duration: 1000
-					})
-					if(this.timer != null) {
-						return
-					}
-					this.timer = setTimeout(() => {
-						uni.navigateTo({
-							url: '/pages/apiLetter/apiLetter'
-						})
-						clearTimeout(this.timer);
-						this.timer = null;
-					}, 1000)
-				
-					this.$once('hook:beforeDestroy', () => {
-						clearTimeout(this.timer);
-						this.timer = null;
-					})
-					
-					return
-				}
-				// // 灰色不给点，不等于1才可以点
-				if(this.gainType == 1) {
-					return
-				}else {
-					// toast('该币种已经是整仓套利')
-				}
-				let title = '整仓套利'
-				let content = '当前币种所有订单按照均价出货，确认操作吗?';
-				
-				uni.showModal({
-					title: title,
-					content: content,
-					success: async (res) => {
-						if (res.confirm) {
-							console.log('this.gainType',this.gainType)
-							let obj = {
-								UserId: this.UserId,
-								Token: this.Token,
-								CurrencyId: this.CurrencyId,
-								Type: 1
-							}
-							let res = await post('Trade/StrategyTradingin',obj)
-							toast(res.msg)
-							if(res.code == 0) {
-								this.gainType = 1
-							}
-						} else if (res.cancel) {
-							console.log('用户点击取消');
-						}
-					}
-				});
-				
-				
+			// 下拉刷新
+			onPullDownRefresh() {
+				 
+				new Promise((res, rej) => {
+					this.UserId = uni.getStorageSync("userId")
+					this.Token = uni.getStorageSync("token")
+					this.getStrategyTradingxq()
+					// res()
+				}).then(() => {
+					uni.stopPullDownRefresh()
+				})
 			},
-			
-		},
-		// 下拉刷新
-		onPullDownRefresh() {
-			new Promise((res, rej) => {
-				this.UserId = uni.getStorageSync("userId")
-				this.Token = uni.getStorageSync("token")
-				this.getStrategyTradingxq()
-				// res()
-			}).then(() => {
-				uni.stopPullDownRefresh()
-			})
-		},
+		}
 	}
 </script>
 
