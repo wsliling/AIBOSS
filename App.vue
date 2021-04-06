@@ -50,21 +50,23 @@
 			}
 			// #endif
 			// 自定义导航栏，获取设备顶部高度
-			uni.getSystemInfo({
-				success:function(e){
-					Vue.prototype.statusBar = e.statusBarHeight;
-					// Vue.prototype.customBar = e.statusBarHeight + 50
-					if(e.platform == 'android') {
-						// Vue.prototype.customBar = e.statusBarHeight + 50
-						Vue.prototype.customBar = e.statusBarHeight + 44
-						console.log('安卓高度',Vue.prototype.statusBar)
-					}else {
-						// Vue.prototype.customBar = e.statusBarHeight + 45
-						Vue.prototype.customBar = e.statusBarHeight + 41
-					}
+			Vue.prototype.statusBar = plus.navigator.getStatusbarHeight()
+			Vue.prototype.customBar = Vue.prototype.statusBar + 45
+			// uni.getSystemInfo({
+			// 	success:function(e){
+			// 		Vue.prototype.statusBar = e.statusBarHeight;
+			// 		// Vue.prototype.customBar = e.statusBarHeight + 50
+			// 		if(e.platform == 'android') {
+			// 			// Vue.prototype.customBar = e.statusBarHeight + 50
+			// 			Vue.prototype.customBar = e.statusBarHeight + 44
+			// 			console.log('安卓高度',Vue.prototype.statusBar)
+			// 		}else {
+			// 			// Vue.prototype.customBar = e.statusBarHeight + 45
+			// 			Vue.prototype.customBar = e.statusBarHeight + 41
+			// 		}
 						
-				}
-			})
+			// 	}
+			// })
 		}, 
 		onShow: function() {
 			console.log('App Show')

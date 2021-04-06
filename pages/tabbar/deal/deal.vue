@@ -1,4 +1,6 @@
 <template>
+<view>
+	<!-- <view :style="{'height': customBar +'rpx'}" style="background-color: #FFFFFF;"></view> -->
 	<view class="main">
 		<!-- <view class="menuBtn"  @click="openFooter">
 			<view class="iconBtn">
@@ -16,12 +18,12 @@
 				
 			</view>
 		</view> -->
-		<view :style="{'height': customBar +'rpx'}"></view>
+		
 		<header-bar :title="tabTitle" titleTintColor="#000" :bgColor='bgColor' :center='center' :isBack="true">
 			<view @tap="goBack" slot="back" class="uni_btnIco iconfont icon-fangdajing"></view>
 			<view slot="string">
 				<view @tap="toKaitong" class="header-right iconfont icon-shaixuan">
-
+	
 				</view>
 			</view>
 		</header-bar>
@@ -47,18 +49,18 @@
 						<deal-item :dealItem="tempObj[key3]" :scrollTop='scrollTop'></deal-item>
 						
 					</view> -->
-
+	
 					<view class="mainList-item" :class="[item3.active ? '' : 'my-bg-gary']" v-for="(item3,index3) in item.list" :key="index3">
 						<!-- {{index3+1}} -->
 						<deal-item :dealItem="item3" :scrollTop='scrollTop' :isShowAllProfit='isShowAllProfit'></deal-item>
 					</view>
-
+	
 					<!-- <radio-group> -->
-
+	
 					<!-- <uni-load-more v-if="!item.isAdd" :loadingType="loadMore"></uni-load-more> -->
 					<uni-load-more :loadingType="loadMore"></uni-load-more>
 					<view class="my-tab-empty-box">
-
+	
 					</view>
 					<!-- <not-data v-if="!isGet" tipsTitle="没有更多了"></not-data> -->
 					<!-- </radio-group> -->
@@ -114,7 +116,7 @@
 				</view>
 			</view>
 		</uni-popup> -->
-
+	
 		<view class="my-bottom fs-18">
 			<view class="bottom-left">
 				<view class="">火币网账户剩余 <text style="color: #ffeb3b;">{{ surplusUsdt | four }}</text> <text class="unit">USDT</text></view>
@@ -126,7 +128,7 @@
 		</view>
 		<!-- 确认弹窗 -->
 		<!-- <my-showModal ref='modal' @success='modalSuccess' :title='title' :content='content'></my-showModal> -->
-
+	
 		<!-- 		<view class="modal" v-show="showOrHide" @click="showOrHide = false">
 			
 		</view>
@@ -160,6 +162,9 @@
 		</view> -->
 		<tabbar :current='1'></tabbar>
 	</view>
+	
+</view>
+
 </template>
 
 <script>
