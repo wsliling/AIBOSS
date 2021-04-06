@@ -26,16 +26,16 @@
 			<view class="earnings">
 				<view class="sy_icon">
 					<image src="../../../static/sy_icon.png"></image>
-					<view class="txt">平台今日收益（元）</view>
+					<view class="txt">平台今日收益</view>
 				</view>
-				<view class="number">546678.00</view>
+				<view class="number">${{DayProfit | four(2)}}</view>
 			</view>
 			<view class="earningsbgcoor earnings">
 				<view class="sy_icon">
 					<image src="../../../static/sy_icon1.png"></image>
-					<view class="txt">平台累计收益（元）</view>
+					<view class="txt">平台累计收益</view>
 				</view>
-				<view class="number">897546678.00</view>
+				<view class="number">${{SumProfit | four(2)}}</view>
 			</view>
 		</view>
 		<!-- <view class="w-bg">
@@ -486,7 +486,10 @@
 				// 		amount: 0,
 				// 		baifenbi: 0
 				// 	}
-				// ]
+				// ],
+				DayProfit:0,
+				SumProfit:0
+				
 			}
 		},
 		components: {
@@ -537,6 +540,8 @@
 			]
 			// 打开行情ws
 			this.GetCurrencyMarkets()
+			//获取平台收益
+			this.GetPlatIncomeHz()
 			this.openSocket()
 
 			// this.openSocket()
@@ -596,6 +601,7 @@
 				this.GetPlatformType()
 				this.getBannerList()
 				this.getRealTime()
+				this.GetPlatIncomeHz()
 				// this.GetAllCurrency()
 				res()
 			}).then(() => {
@@ -645,6 +651,15 @@
 					})
 					return
 				}
+			},
+			//获取平台收益
+			async GetPlatIncomeHz(){
+				let res = await get('Recharge/GetPlatIncomeHz')
+				if(res.code == 0) {
+					this.DayProfit=res.data.DayProfit;
+					this.SumProfit=res.data.SumProfit;
+				}
+				
 			},
 			golink(url,index){console.log(index)
 				if(index==1){

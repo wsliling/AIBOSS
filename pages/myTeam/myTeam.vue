@@ -43,7 +43,7 @@
 						</view>
 					</view>
 				</view>
-				<view class="card-text">
+				<view class="card-text" v-if="false">
 					<view class="card-text-left">
 						<!-- 		<image :src="directFatherInfo.avatar" mode="aspectFill" class="img"></image>
 						<view class="card-right">

@@ -254,14 +254,14 @@ page {
 .list-kefu .earnings .sy_icon{
 	display: flex;
 	font-size: 26upx;
-	margin:0 20upx;
-	margin-top: 20upx;
-	margin-bottom: 10upx;
+	margin:0 24upx;
+	margin-top: 30upx;
+	margin-bottom: 20upx;
 	align-items: center;
 }
 .list-kefu .earnings .number{
 	font-size: 32upx;
-	margin-left: 20upx;
+	margin-left: 24upx;
 	font-weight: bold;
 }
 .list-kefu .earnings .sy_icon image{
