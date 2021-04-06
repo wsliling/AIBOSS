@@ -1,6 +1,6 @@
 <template>
 	<view class="big-box">
-		<view :style="{'height': customBar+'upx'}">gh </view>
+		<view :style="{'height': customBar+'upx'}"></view>
 		<view class="home_top" >
 			<swiper class="swiper" indicator-active-color="#FFFFFF" :indicator-dots="indicatorDots" :autoplay="autoplay"
 			 :interval="interval" :duration="duration" :circular="true">
