@@ -1,7 +1,7 @@
 <template>
 	<view class="big-box">
-		<view :style="{'height':customBar+'upx'}"></view>
-		<view class="home_top" :style="{'margin-top':30 + customBar +'rpx'}">
+		<view :style="{'height': customBar+'upx'}">gh </view>
+		<view class="home_top" >
 			<swiper class="swiper" indicator-active-color="#FFFFFF" :indicator-dots="indicatorDots" :autoplay="autoplay"
 			 :interval="interval" :duration="duration" :circular="true">
 				<swiper-item v-for="item in swiperList" :key="item.id">
