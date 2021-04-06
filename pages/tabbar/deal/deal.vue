@@ -16,7 +16,8 @@
 				
 			</view>
 		</view> -->
-		<header-bar :title="tabTitle" titleTintColor="#000" :bgColor='bgColor' :center='center' :isBack="true" :style="{'margin-top': customBar +'rpx'}">
+		<view :style="{'height': customBar +'rpx'}"></view>
+		<header-bar :title="tabTitle" titleTintColor="#000" :bgColor='bgColor' :center='center' :isBack="true">
 			<view @tap="goBack" slot="back" class="uni_btnIco iconfont icon-fangdajing"></view>
 			<view slot="string">
 				<view @tap="toKaitong" class="header-right iconfont icon-shaixuan">
