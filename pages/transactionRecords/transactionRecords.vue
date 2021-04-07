@@ -504,7 +504,7 @@
 				this.closePop('drawerPop')
 			},
 			openPop(ref) {
-				console.log(this.$refs)
+				// console.log(this.$refs)
 				this.$refs[ref].open()
 			},
 			closePop(ref) {

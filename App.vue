@@ -1,8 +1,6 @@
 <script>
 	import Vue from 'vue';
-	import {
-		host
-	} from '@/common/utils/index.js';
+	import { host } from '@/common/utils/index.js';
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')

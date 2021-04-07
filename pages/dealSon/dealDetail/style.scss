@@ -240,23 +240,20 @@ view {
 	text-align: right;
 	font-size: 28upx;
 }
-.mt40 {
-	margin-top: 150upx !important;
-}
+
 .bottom_btn {
 	width: 100%;
-	// position: fixed;
-	// left: 0;
-	// bottom: 0;
-	margin-top: 40upx;
+	position: fixed;
+	left: 0;
+	bottom: 0;
 	padding: 30upx;
-	background: #F8F8F8;
+	background: #fff;
 	z-index: 2;
 }
 
 .bottom_btn .btn {
 	font-size: 32upx;
-	/* background: linear-gradient(90deg, #02D48E, #17B580); */
+	margin-top: 30upx;
 	background: linear-gradient(90deg, rgb(65, 140, 241), rgb(0, 101, 235));
 	color: #FFFFFF;
 }
