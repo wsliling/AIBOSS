@@ -138,6 +138,9 @@
 			};
 		},
 		onLoad() {
+			
+		},
+		onShow() {
 			this.userId = uni.getStorageSync('userId')
 			this.token = uni.getStorageSync('token')
 			this.getUserAssetsInfo()
@@ -246,8 +249,8 @@
 					typeclass=0
 				}
 				let obj = {
-					UserId: this.userId,
-					Token: this.token,
+					UserId: uni.getStorageSync('userId'),
+					Token: uni.getStorageSync('token'),
 					Year: this.Year,
 					Month: this.Month,
 					Type:typeclass,
