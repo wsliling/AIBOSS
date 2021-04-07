@@ -1,5 +1,8 @@
 <script>
 	import Vue from 'vue';
+	import {
+		host
+	} from '@/common/utils/index.js';
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
@@ -64,6 +67,7 @@
 						
 				}
 			})
+			
 		}, 
 		onShow: function() {
 			console.log('App Show')

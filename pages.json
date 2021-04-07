@@ -436,7 +436,7 @@
 	"tabBar": {
 		"custom":true,
 		"color": "#7A7E83",
-		"selectedColor": "#3cc51f",
+		"selectedColor": "#4387ea",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"list": [{
@@ -444,21 +444,23 @@
 			"iconPath": "static/shouye.png",
 			"selectedIconPath": "./static/selectshouye.png",
 			"text": "首页"
-		}, {
-			"pagePath": "pages/tabbar/quantization/quantization",
-			"iconPath": "static/lianghua.png",
-			"selectedIconPath": "./static/selectlianghua.png",
-			"text": "量化"
-		}, {
+		},
+		// {
+		// 	"pagePath": "pages/tabbar/quantization/quantization",
+		// 	"iconPath": "static/lianghua.png",
+		// 	"selectedIconPath": "./static/selectlianghua.png",
+		// 	"text": "量化"
+		// },
+		{
 			"pagePath": "pages/tabbar/deal/deal",
 			"iconPath": "static/jiaoyi.png",
 			"selectedIconPath": "./static/selectjiaoyi.png",
-			"text": "交易"
+			"text": "AI量化"
 		}, {
 			"pagePath": "pages/tabbar/notice/notice",
 			"iconPath": "./static/zichan.png",
 			"selectedIconPath": "./static/selectzichan.png",
-			"text": "公告"
+			"text": "资讯"
 		}, {
 			"pagePath": "pages/tabbar/mine/mine",
 			"iconPath": "./static/wode.png",

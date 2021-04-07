@@ -157,7 +157,7 @@
 				</view>
 			</view>
 		</view> -->
-		<tabbar :current='2'></tabbar>
+		<tabbar :current='1'></tabbar>
 	</view>
 </template>
 
@@ -195,7 +195,7 @@
 				UserId: '',
 				Token: '',
 				Page: 1,
-				PageSize: 4000,
+				PageSize: 100,
 				bgColor: {
 					// 'background': 'linear-gradient(90deg, #02D48E, #17B580)',
 					'background': '#fff'
@@ -389,6 +389,7 @@
 
 			this.pageHeight = uni.getSystemInfoSync().windowHeight - 166; //减去可视窗口除swiper的盒子的高度即为swiper高度
 			//console.log(this.pageHeight)
+			this.getStrategyTrading()
 		},
 		onShow() {
 			this.allFirstAmount=0;
@@ -411,23 +412,23 @@
 			this.Page = 1
 			this.loadMore = 0
 			this.clist[this.currentIndex].isAdd = true
-			this.clist[this.currentIndex].list = []
-			this.clist = [{
-				list: [],
-				isAdd: true
-			}, {
-				list: [],
-				isAdd: true
-			}, {
-				list: [],
-				isAdd: true
-			}, {
-				list: [],
-				isAdd: true
-			}]
+			// this.clist[this.currentIndex].list = []
+			// this.clist = [{
+			// 	list: [],
+			// 	isAdd: true
+			// }, {
+			// 	list: [],
+			// 	isAdd: true
+			// }, {
+			// 	list: [],
+			// 	isAdd: true
+			// }, {
+			// 	list: [],
+			// 	isAdd: true
+			// }]
 			// this.GetMemberInfo()
 
-			this.getStrategyTrading()
+			
 		},
 		onHide() {
 			console.log('隐藏要么======')

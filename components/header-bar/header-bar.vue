@@ -4,7 +4,7 @@
 			<!-- 返回 -->
 			<!-- <text class="uni_icoBack iconfont icon-arrL" v-if="isBack" @tap="goBack"></text> -->
 			<!-- <view class="my-back" v-if="isBack" @tap="goBack"> -->
-			<view class="my-back" v-if="isBack">
+			<view class="my-back" v-if="isBack" :style="{'color': titleTintColor}">
 				<slot name="back"></slot>
 			</view>
 			<slot name="headerL"></slot>
@@ -13,7 +13,7 @@
 			<!-- <view class="flex1" v-if="!search && center"></view> -->
 			<view class="flex1" v-if="search && center"></view>
 			<!-- #endif -->
-			<view class="uni_title flex1" :class="[center ? 'uni_titleCenter' : '']" :style="[isBack ? {'font-size': '16px', 'padding-left': '0'} : '']"
+			<view class="uni_title flex1" :class="[center ? 'uni_titleCenter' : '']" :style="[isBack ? {'font-size': '16px', 'padding-left': '0','color': titleTintColor} : '']"
 			 v-if="!search && title">
 				{{title}}
 			</view>
