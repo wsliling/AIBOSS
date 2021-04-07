@@ -439,12 +439,13 @@
 		"selectedColor": "#4387ea",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
-		"list": [{
+		"list": [
+			{
 			"pagePath": "pages/tabbar/home/home",
 			"iconPath": "static/shouye.png",
 			"selectedIconPath": "./static/selectshouye.png",
 			"text": "首页"
-		},
+			},
 		// {
 		// 	"pagePath": "pages/tabbar/quantization/quantization",
 		// 	"iconPath": "static/lianghua.png",

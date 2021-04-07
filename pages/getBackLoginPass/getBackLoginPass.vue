@@ -559,7 +559,7 @@
  	}
  
  	.bottom_btn .btn {
- 		background-image: linear-gradient(#2decad, #17b580);
+ 		background-image: linear-gradient(#418cf1, #0065eb);
  		color: #FFFFFF;
  	}
  	.uni-input-input, .uni-input-placeholder{

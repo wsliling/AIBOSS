@@ -1,5 +1,7 @@
 <template>
 	<view class="content">
+		<header-bar :title="tabTitle" titleTintColor="#000" :bgColor='bgColor' :center='center' :isBack="true">
+		</header-bar>
 		<view class="topbox">
 			<image class="" src="/static/logo.png" mode="widthFix"></image>
 			<view class="title">
@@ -106,6 +108,12 @@
 		},
 		data() {
 			return {
+				bgColor: {
+					'background': '#4387ea'
+				},
+				tabTitle: '',
+				center: true,
+				customBar: this.customBar,
 				tel: "",
 				pwd: "",
 				askUrl: "",
@@ -482,10 +490,11 @@
 
 	.regLoginBox {
 		width: 90%;
-		position: absolute;
-		top: 55vh;
-		left: 5%;
-		transform: translateY(-50%);
+		// position: absolute;
+		// top: 55vh;
+		// left: 5%;
+		// transform: translateY(-50%);
+		margin: 50upx auto 0;
 		border-radius: 20rpx;
 		box-sizing: border-box;
 	}
@@ -556,10 +565,11 @@
 
 	.topbox{
 		width: 100%;
-		position: fixed;
-		top: 0;
+		// position: fixed;
+		// top: 0;
 		// height: 400upx;
-		height: calc(50vh - 400upx);
+		// height: calc(50vh - 400upx);
+		padding: 20upx 0 50upx;
 		background-color: #4387ea;
 		display: flex;
 		align-items: center;
