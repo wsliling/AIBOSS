@@ -32,11 +32,12 @@
 					</view>
 				</view>
 			</view>
-			<view class="userCard fund" v-if="false">
+			<view class="userCard fund">
 				<view class="cardLeft">
-					<view class="cardTitle color_white">团队对冲基金</view>
-					<view class="cardMoney" v-if="yanbol1">
-						<view class="nums">25u</view>
+					<view class="cardTitle color_white">团队对冲基金/USDT</view>
+					<view class="cardMoney flex flexAlignBaseline" v-if="yanbol1">
+						<view class="nums">{{platstayhz}}</view>
+						<!-- <view class="" v-if="platstayhz!=0">≈¥ {{ platstayhzCNY }} CNY</view> -->
 					</view>
 					<view class="cardMoney" v-else>******</view>
 					
@@ -191,7 +192,9 @@ export default {
 
 			// 弹窗
 			popTitle: '预存500U抵扣款，激活推广权限!',
-			popContent: '是否前往充值?'
+			popContent: '是否前往充值?',
+			platstayhz:0,//团队对冲基金
+			platstayhzCNY:0,
 		};
 	},
 	components: {
@@ -233,7 +236,7 @@ export default {
 			if (this.userId && this.token) {
 				this.getStatistics();
 			}
-			//this.GetMemberInfo()
+			this.getplatstayhz()
 		},
 		yanbols() {
 			this.yanbol = !this.yanbol;
@@ -421,6 +424,13 @@ export default {
 		// 	this.lc = res.data.lc
 		// 	this.usdt = res.data.usdt
 		// },
+		//获取团队对冲基金
+		async getplatstayhz(){
+			let res=await get('Recharge/GetPlatStayHz')
+			if(res.code!=0) return
+			this.platstayhz=res.data.PlatStay;
+			this.platstayhzCNY=(this.platstayhz * this.$store.state.cnyrate).toFixed(6);
+		},
 		async getStatistics() {
 			let datatime = new Date();
 			let month = datatime.getMonth() + 1;
