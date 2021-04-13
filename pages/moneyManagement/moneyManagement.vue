@@ -113,6 +113,9 @@
 							{name:'划转',
 								conver:this.toConvert1
 							},
+							{name:'互转',
+								conver:this.toConvert1
+							},
 						],
 						chidron:'最近收益记录',
 						detailurl:'/pages/convertDetail/convertDetail'

@@ -69,80 +69,82 @@
 		<view class="team-box">
 			<select-tab>
 				<template v-slot:mainBox>
-					<view class="box-item" @click="toMoneyManagement">
-						<view class="box-item-left">
-							<image src="../../../static/mine/money_icon.png" mode="aspectFill"></image>
-							<view class="left-text">我的钱包</view>
+					<view style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+						<view class="box-item" @click="toMoneyManagement">
+							<view class="box-item-left">
+								<image src="../../../static/mine/money_icon.png" mode="aspectFill"></image>
+								<view class="left-text">我的钱包</view>
+							</view>
+							<!-- <view class="box-item-right iconfont icon-dayuhao"></view> -->
 						</view>
-						<view class="box-item-right iconfont icon-dayuhao"></view>
-					</view>
-					<view class="box-item" @click="toapiLetter">
-						<view class="box-item-left">
-							<image src="../../../static/mine/API_icon.png" mode="aspectFill"></image>
-							<view class="left-text">API授权</view>
+						<view class="box-item" @click="toapiLetter">
+							<view class="box-item-left">
+								<image src="../../../static/mine/API_icon.png" mode="aspectFill"></image>
+								<view class="left-text">API授权</view>
+							</view>
+							<!-- <view class="box-item-right iconfont icon-dayuhao"></view> -->
 						</view>
-						<view class="box-item-right iconfont icon-dayuhao"></view>
-					</view>
-					<view class="box-item" @click="toMyProfit">
-						<view class="box-item-left">
-							<image src="../../../static/mine/sy_icon.png" mode="aspectFill"></image>
-							<view class="left-text">我的收益</view>
+						<view class="box-item" @click="toMyProfit">
+							<view class="box-item-left">
+								<image src="../../../static/mine/sy_icon.png" mode="aspectFill"></image>
+								<view class="left-text">我的收益</view>
+							</view>
+							<!-- <view class="box-item-right iconfont icon-dayuhao"></view> -->
 						</view>
-						<view class="box-item-right iconfont icon-dayuhao"></view>
-					</view>
-					<view class="box-item" data-index="team" @click="toMyTeam">
-						<view class="box-item-left">
-							<!-- <view class="iconfont icon-wodetuandui left-icon">
-							</view> -->
-							<image src="/static/mine/tuandui.png" mode="aspectFill"></image>
-							<view class="left-text">我的团队</view>
+						<view class="box-item" data-index="team" @click="toMyTeam">
+							<view class="box-item-left">
+								<!-- <view class="iconfont icon-wodetuandui left-icon">
+								</view> -->
+								<image src="/static/mine/tuandui.png" mode="aspectFill"></image>
+								<view class="left-text">我的团队</view>
+							</view>
+							<!-- <view class="box-item-right iconfont icon-dayuhao"></view> -->
 						</view>
-						<view class="box-item-right iconfont icon-dayuhao"></view>
-					</view>
-					<view class="box-item" data-index="friend" @click="toFirends">
-						<view class="box-item-left">
-							<!-- <view class="iconfont icon-yaoqinghaoyou left-icon fz-small">
-							</view> -->
-							<image src="/static/mine/haoyou.png" mode="aspectFill"></image>
-							<view class="left-text">邀请好友</view>
+						<view class="box-item" data-index="friend" @click="toFirends">
+							<view class="box-item-left">
+								<!-- <view class="iconfont icon-yaoqinghaoyou left-icon fz-small">
+								</view> -->
+								<image src="/static/mine/haoyou.png" mode="aspectFill"></image>
+								<view class="left-text">邀请好友</view>
+							</view>
+							<!-- <view class="box-item-right iconfont icon-dayuhao"></view> -->
 						</view>
-						<view class="box-item-right iconfont icon-dayuhao"></view>
-					</view>
-					<view class="box-item" @click="totransactionRecords" data-index="jilu">
-						<view class="box-item-left">
-							<!-- <view class="iconfont icon-jiaoyijilu left-icon">
-							</view> -->
-							<image src="/static/mine/jiaoyijilu.png" mode="aspectFill"></image>
-							<view class="left-text">交易记录</view>
+						<view class="box-item" @click="totransactionRecords" data-index="jilu">
+							<view class="box-item-left">
+								<!-- <view class="iconfont icon-jiaoyijilu left-icon">
+								</view> -->
+								<image src="/static/mine/jiaoyijilu.png" mode="aspectFill"></image>
+								<view class="left-text">交易记录</view>
+							</view>
+							<!-- <view class="box-item-right iconfont icon-dayuhao"></view> -->
 						</view>
-						<view class="box-item-right iconfont icon-dayuhao"></view>
-					</view>
-					<view class="box-item" @click="tojournal" data-index="rizhi">
-						<view class="box-item-left">
-							<!-- <view class="iconfont icon-rizhi left-icon">
-							</view> -->
-							<image src="/static/mine/jiaoyirizhi.png" mode="aspectFill"></image>
-							<view class="left-text">交易日志</view>
+						<view class="box-item" @click="tojournal" data-index="rizhi">
+							<view class="box-item-left">
+								<!-- <view class="iconfont icon-rizhi left-icon">
+								</view> -->
+								<image src="/static/mine/jiaoyirizhi.png" mode="aspectFill"></image>
+								<view class="left-text">交易日志</view>
+							</view>
+							<!-- <view class="box-item-right iconfont icon-dayuhao"></view> -->
 						</view>
-						<view class="box-item-right iconfont icon-dayuhao"></view>
-					</view>
-					<view class="box-item" @click="tocustomerService" data-index="kefu">
-						<view class="box-item-left">
-							<!-- <view class="iconfont icon-kefu left-icon">
-							</view> -->
-							<image src="/static/mine/kefu.png" mode="aspectFill"></image>
-							<view class="left-text">专属客服</view>
+						<view class="box-item" @click="tocustomerService" data-index="kefu">
+							<view class="box-item-left">
+								<!-- <view class="iconfont icon-kefu left-icon">
+								</view> -->
+								<image src="/static/mine/kefu.png" mode="aspectFill"></image>
+								<view class="left-text">专属客服</view>
+							</view>
+							<!-- <view class="box-item-right iconfont icon-dayuhao"></view> -->
 						</view>
-						<view class="box-item-right iconfont icon-dayuhao"></view>
-					</view>
-					<view class="box-item" @click="toSetUp">
-						<view class="box-item-left">
-							<!-- <view class="iconfont icon-kefu left-icon">
-							</view> -->
-							<image src="/static/mine/shezhi.png" mode="aspectFill"></image>
-							<view class="left-text">设置</view>
+						<view class="box-item" @click="toSetUp">
+							<view class="box-item-left">
+								<!-- <view class="iconfont icon-kefu left-icon">
+								</view> -->
+								<image src="/static/mine/shezhi.png" mode="aspectFill"></image>
+								<view class="left-text">设置</view>
+							</view>
+							<!-- <view class="box-item-right iconfont icon-dayuhao"></view> -->
 						</view>
-						<view class="box-item-right iconfont icon-dayuhao"></view>
 					</view>
 				</template>
 			</select-tab>
