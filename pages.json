@@ -31,6 +31,12 @@
 			}
 		},
 		{
+			"path": "pages/turnCoin/turnCoin",
+			"style": {
+				"navigationBarTitleText": "转币"
+			}
+		},
+		{
 			"path": "pages/login/login",
 			"style": {
 				"navigationBarTitleText": "登录",

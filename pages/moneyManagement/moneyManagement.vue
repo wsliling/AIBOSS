@@ -114,7 +114,7 @@
 								conver:this.toConvert1
 							},
 							{name:'互转',
-								conver:this.toConvert1
+								conver:this.toConvert2
 							},
 						],
 						chidron:'最近收益记录',
@@ -193,6 +193,12 @@
 				if (!judgeLogin()) return
 				uni.navigateTo({
 					url: '/pages/convert/convert?fromshouyi=1'
+				})
+			},
+			toConvert2() {
+				if (!judgeLogin()) return
+				uni.navigateTo({
+					url: '/pages/turnCoin/turnCoin'
 				})
 			},
 			// 跳转转换页面

@@ -48,13 +48,14 @@ page{
 	background-size: contain;
 	color: #FFFFFF;
 	padding: 20upx;
+	margin: 20upx 0;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
 }
 .header .fund{
 	width: 690upx;
-	height: 240upx;
+	height: 120upx;
 	background-image: url(../../../static/card1.png);
 	background-size: 100% 100%;
 	border-radius: 12rpx;

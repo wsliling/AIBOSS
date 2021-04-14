@@ -32,7 +32,8 @@
 					</view>
 				</view>
 			</view>
-			<view class="userCard fund">
+			<!-- fund -->
+			<view class="userCard">
 				<view class="cardLeft">
 					<view class="cardTitle color_white">团队对冲基金/USDT</view>
 					<view class="cardMoney flex flexAlignBaseline" v-if="yanbol1">
