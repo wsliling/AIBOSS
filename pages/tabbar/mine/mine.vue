@@ -41,7 +41,7 @@
 						<!-- <view class="" v-if="platstayhz!=0">≈¥ {{ platstayhzCNY }} CNY</view> -->
 					</view>
 					<view class="cardMoney" v-else>******</view>
-					
+					<view class=""></view>
 				</view>
 				<view class="cardRight">
 					<image :src="yanbol1 ? '/static/cardIcon1.png' : '/static/yanjin1.png'" class="img1" mode="widthFix" @click="yanbols1"></image>
