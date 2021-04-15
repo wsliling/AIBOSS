@@ -112,10 +112,7 @@
 						buttons:[
 							{name:'划转',
 								conver:this.toConvert1
-							},
-							{name:'互转',
-								conver:this.toConvert2
-							},
+							}
 						],
 						chidron:'最近收益记录',
 						detailurl:'/pages/convertDetail/convertDetail'
@@ -140,8 +137,18 @@
 				tabList:[],//最近数据
 			};
 		},
-		onLoad() {
-			
+		onLoad(e) {
+			if(e.IsAuthLC==1){//是否显示转让
+				let arr=[
+					{name:'充币',
+						url:'/pages/lcInvest/lcInvest'
+					},
+					{
+						name:'转让',
+						url:'/pages/turnCoin/turnCoin',
+					}]
+				this.walletInfo[1]['buttons']=arr;
+			}
 		},
 		onShow() {
 			this.userId = uni.getStorageSync('userId')
@@ -193,12 +200,6 @@
 				if (!judgeLogin()) return
 				uni.navigateTo({
 					url: '/pages/convert/convert?fromshouyi=1'
-				})
-			},
-			toConvert2() {
-				if (!judgeLogin()) return
-				uni.navigateTo({
-					url: '/pages/turnCoin/turnCoin'
 				})
 			},
 			// 跳转转换页面

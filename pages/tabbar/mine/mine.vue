@@ -171,6 +171,7 @@ export default {
 			gradeName: '',
 			canIniviteFriend: 0, //  0:可以邀请好友 1:不可以邀请好友
 			isAut: 0, // 0是未开通, 1开通了
+			IsAuthLC: 0, //是否显示转账点卡页面 0：否
 			isVip: 0, // 0不是特权用户,1是特权用户
 			lc: 0,
 			usdt: 0,
@@ -226,7 +227,7 @@ export default {
 	methods: {
 		toMoneyManagement() {
 			uni.navigateTo({
-				url: '../../moneyManagement/moneyManagement'
+				url: '../../moneyManagement/moneyManagement?IsAuthLC=' + this.IsAuthLC
 			});
 		},
 		init() {
@@ -415,6 +416,7 @@ export default {
 			this.grade = res.data.grade;
 			this.isAut = res.data.isAut;
 			this.isVip = res.data.isVip;
+			this.IsAuthLC = res.data.IsAuthLC;
 		},
 		// 资产信息
 		// async getUserAssetsInfo() {
